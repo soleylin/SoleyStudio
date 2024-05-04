@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/myall.css" />
+    <link rel="stylesheet" href="css/front/modal.css" />
+    <link rel="stylesheet" href="css/front/index.css" />
+    <title>Soley Studio</title>
+  </head>
+  <body>
+    <section class="s1">
+      <div class="box01 bg-cover"></div>
+      <div class="s1_text mt-2">
+        <div class="text-end me-3">台中西屯區 | 台灣大道坪頂站</div>
+        <div class="text-end s1_text02">台東市市區 | 開放預約中</div>
+      </div>
+    </section>
+    <section class="s2">
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-auto mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio/nail.html"
+                  >凝膠美甲</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio/face.html"
+                  >臉部保養</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio/eyebrow.html">霧眉</a>
+              </li>
+              <li class="nav_li"></li>            
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio/feedback.html"
+                  >顧客回饋</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-500" aria-current="page" href="http://soleylin.github.io/SoleyStudio/cart.html"
+                  >購物車</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-500"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  會員專區
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_member"
+                      href="http://soleylin.github.io/SoleyStudio/member.html"
+                      >會員資料</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_reserve"
+                      href="http://soleylin.github.io/SoleyStudio/reserve.html"
+                      >預約服務</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-none" id="navbar_admin" href="http://soleylin.github.io/SoleyStudio/admin/home.html"
+                      >後臺資料</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <span class="h5 ms-auto me-1 d-none" id="user_message">user</span>
+            <button class="btn btn-sm logout_btn d-none" id="logout_btn">
+              登出
+            </button>
+            <button
+              class="btn btn-sm login_btn"
+              id="login_btn"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              登入
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!--section2 Modal-login -->
+    <div
+      class="modal wow animate__fadeInDown"
+      data-memberModal="hidden"
+      data-wow-duration="0.8s"
+      data-wow-delay="0s"
+      data-wow-iteration="1"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-500" id="loginModalLabel">
+              會員登入
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="login_acc" class="form-label">帳號</label>
+              <input
+                type="text"
+                class="form-control"
+                id="login_acc"
+                name="login_acc"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="login_pwd" class="form-label">密碼</label>
+              <div class="inputWithin">
+              <input
+                type="password"
+                class="form-control"
+                id="login_pwd"
+                name="login_pwd"
+              /> <button class="icon" id="login_icon1"><i class="fa-regular fa-eye-slash"></i></button> <button class="icon d-none" id="login_icon2"><i class="fa-regular fa-eye icon"></i></button></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn reg_btn text-primary"
+              id="reg_btn"
+              data-bs-toggle="modal"
+              data-bs-target="#regModal"
+            >
+              建立新帳號
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary fw-500"
+              data-bs-dismiss="modal"
+              id="login_cancel_btn"
+            >
+              取消
+            </button>
+            <button type="button" class="btn fw-500" id="login_ok_btn">
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section2 Modal-reg -->
+    <div
+      class="modal wow animate__fadeInDown"
+      data-memberModal="hidden"
+      data-wow-duration="0.8s"
+      data-wow-delay="0s"
+      data-wow-iteration="1"
+      id="regModal"
+      tabindex="-1"
+      aria-labelledby="regModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-500" id="regModalLabel">註冊會員</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body modalbody02_line timeline_section">
+            <div class="row">
+              <div class="col-6">
+                <h2>會員守則</h2>
+                <p>
+                  1.
+                  遵守當地的法律法規，包括但不限於消費者權益保護法、個人資料保護法等相關法規。
+                </p>
+                <p>2. 妥善保護自己的個人資料，不得散播、出售或洩漏給第三方。</p>
+                <p>
+                  3.
+                  尊重其他會員的權益，不得進行侵害他人權益的行為，包括但不限於誹謗、侮辱、恐嚇等行為。
+                </p>
+                <p>
+                  4.
+                  遵守網站或平台的相關規則，包括但不限於禁止發佈色情、暴力、種族歧視等不當內容的規定。
+                </p>
+                <p>
+                  5.
+                  正當使用網站或平台的資源，不得進行惡意攻擊、破壞系統等行為，以免影響其他用戶的使用權益。
+                </p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="reg_agree_chk"
+                    name="reg_agree_chk"
+                  />
+                  <label class="form-check-label" for="reg_agree_chk"
+                    >同意</label
+                  >
+                </div>
+                <div class="text-danger" id="reg_agree_text"></div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="reg_userName" class="form-label">姓名</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="reg_userName"
+                    name="reg_userName"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="reg_acc" class="form-label">帳號</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="reg_acc"
+                    name="reg_acc"
+                    placeholder="帳號字數 5~15"
+                  />
+                  <div class="valid-feedback" id="reg_acc_text01"></div>
+                  <div class="invalid-feedback" id="reg_acc_text02"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_pwd" class="form-label">密碼</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="reg_pwd"
+                    name="reg_pwd"
+                    placeholder="密碼字數 5~15"
+                  />
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">字數不符合規定</div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_re_pwd" class="form-label">確認密碼</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="reg_re_pwd"
+                    name="reg_re_pwd"
+                  />
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">密碼輸入不一致</div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_tel" class="form-label">電話號碼</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="reg_tel"
+                    name="reg_tel"
+                  />
+                  <div class="valid-feedback" id="reg_tel_text01"></div>
+                  <div class="invalid-feedback" id="reg_tel_text02"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="reg_cancel_btn"
+            >
+              取消
+            </button>
+            <button type="button" class="btn" id="reg_ok_btn">確認註冊</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="s3 bg-cover">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-12 s3_box01 d-none d-md-block bg-cover"></div>
+              <div class="col-12 s3_box02 d-none d-md-block bg-cover"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="s3_text_area">
+              <div class="s3_text01 fw-500">每天都要保持美麗 ت</div>
+              <div class="s3_text02">
+                霧眉 | 美甲 | 痘痘 | 清粉刺 | 斑點 | 毛孔 | 凹疤 | 酒糟肌
+              </div>
+              <div class="s3_text03">
+                痣 | 肉芽 | 脂肪球 | 汗管瘤 | 一對一類醫美技術創業教學
+              </div>
+              <button class="btn s3_btn shadow"><a href="http://soleylin.github.io/SoleyStudio/reserve.html">
+                前往預約</a><i class="fa-solid fa-arrow-right s3_icon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 fw-700 s4_title text-center">服務項目</div>
+          <div class="col-md-12 s4_subtitle text-center fw-600">Service</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box1">
+              <div class="s4_content_title text-center fw-700">霧眉</div>
+              <div class="s4_content_intro text-center fw-700">
+                <div class="mb-2">一人一針具</div>
+                <div class="mb-2">使用業界知名老師監製色乳</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box2 bg-cover"></div>
+          </div>
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box3">
+              <div class="s4_content_title text-center fw-700">凝膠美甲</div>
+              <div class="s4_content_intro text-center fw-700">
+                <div class="mb-2">沙龍等級品牌凝膠與設備</div>
+                <div class="mb-2">產品皆為孕婦可使用</div>
+                <div class="mb-2">可事先傳圖詢價</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box4 bg-cover"></div>
+          </div>
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box5">
+              <div class="s4_content_title text-center fw-700">臉部保養</div>
+              <div class="s4_content_intro text-center fw-700">
+                <div class="mb-2">單次處理速效有感</div>
+                <div class="mb-2">獨家三道清粉刺技術</div>
+                <div class="mb-2">不須雷射修復快速</div>
+                <div class="mb-2">溫和處理惱人斑點</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 s4_content mt-3">
+            <div class="s4_box6 bg-cover"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s5_1">
+      <div class="row gx-0">
+        <div class="col-md-6 s5_box1 bg-cover"></div>
+      </div>
+      <div class="container-lg">
+        <div class="row justify-content-end gx-0">
+          <div class="col-md-6 s5_content">
+            <div class="s5_title fw-500">有別於一般</div>
+            <div class="s5_text mt-3 fw-500">
+              獨家技術處理內包粉刺、皮膚增生物
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              搞定90%肌膚問題 (凹疤、痘印、老化、斑點)
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              不須過多機器，手工技術穩紮穩打
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              教你如何找訂價、找客源、行銷手法
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              無囤貨、業績壓力，不推銷不強迫
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s5_2">
+      <div class="row justify-content-end gx-0">
+        <div class="col-md-6 s5_box2 bg-cover"></div>
+      </div>
+      <div class="container-lg">
+        <div class="row gx-0">
+          <div class="col-md-6 s5_content">
+            <div class="s5_title fw-500">一對一技術教學</div>
+            <div class="s5_text mt-3 fw-500">手把手教學，零基礎也不怕</div>
+            <div class="s5_text mt-3 fw-500">學後不放生，不怕變成孤兒</div>
+            <div class="s5_text mt-3 fw-500">
+              每月多堂進修課程，團隊資源豐富
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              認真上進你也能成為專業老師擁有學生
+            </div>
+            <div class="s5_text mt-3 fw-500">
+              請先看過美容限動精選確認想學再諮詢課程細節需現場諮詢
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s6 d-none d-md-block">
+      <div class="row gx-0">
+        <div class="col-xxl-3"></div>
+        <div class="col-xl-1 d-xxl-none"></div>
+        <div class="col-md-6">
+          <div class="s6_content">
+            <div class="row s6_box1 gx-0">
+              <div class="s6_text1 fw-00">痛會過去</div>
+              <div class="s6_text2 fw-00">美會留下</div>
+            </div>
+            <div class="row gx-0">
+              <div class="col-md-12">
+                <div class="s6_bgbox2"></div>
+                <div class="s6_img1 bg-cover wow animate__fadeInRight"  
+                data-wow-duration="1s"
+                data-wow-delay="0s"></div>
+              </div>
+              <div class="row gx-0">
+                <div class="s6_img2 bg-cover wow animate__fadeInLeft"  
+                data-wow-duration="1s"
+                data-wow-delay="0s"></div>
+                <div class="s6_box3">
+                  <div class="s6_text3 fw-500">一對一不藏私教學</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </section>
+    <section class="s6_md_1 d-md-none">
+      <div class="row gx-0">
+        <div class="col-6 s6_md_img1 bg-cover"></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-6 s6_md_content">
+            <div class="s6_md_text1">痛會過去</div>
+            <div class="s6_md_text2">美會留下</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s6_md_2 d-md-none">
+      <div class="row justify-content-end gx-0">
+        <div class="col-6 s6_md_img2 bg-cover"></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 s6_md_content">
+            <div class="s6_md_text3">一對一不藏私教學</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s7">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 fw-700 s7_title text-center">顧客回饋</div>
+          <div class="col-md-12 s7_subtitle text-center fw-600">Feedback</div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  aria-label="Slide 1"
+                  class="active s7_btn"
+                  aria-current="true"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                  class="s7_btn"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                  class="s7_btn"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                  class="s7_btn"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                  class="s7_btn"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="5"
+                  aria-label="Slide 6"
+                  class="s7_btn"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active s7_carousel_1 bg-cover"></div>
+                <div class="carousel-item s7_carousel_2 bg-cover"></div>
+                <div class="carousel-item s7_carousel_3 bg-cover"></div>
+                <div class="carousel-item s7_carousel_4 bg-cover"></div>
+                <div class="carousel-item s7_carousel_5 bg-cover"></div>
+                <div class="carousel-item s7_carousel_6 bg-cover"></div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="col-md-12"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s8">
+      <div class="container-md gx-0">
+        <div class="row gx-0 gx-md-3">
+          <div class="col-md-6">
+            <div class="s8_bgbox1 bg-cover">
+              <div class="s8_text_box1">
+                <div class="s8_title1 fw-700">
+                  <span class="s8_subtitle1">Soley Studio</span>
+                </div>
+                <div class="s8_text1 fw-500">台中台東做臉｜美容創業教學</div>
+                <div class="s8_text1 fw-500">肉芽脂肪球汗管瘤處理</div>
+                <div class="s8_text1 fw-500">類醫美肌膚調理&nbsp;☽</div>
+                <button class="s8_btn"><a href="http://soleylin.github.io/SoleyStudio/reserve.html">
+                  前往預約</a><i class="fa-solid fa-arrow-right s3_icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row gx-0">
+              <div class="col-md-12">
+                <div class="s8_bgbox2 bg-cover">
+                  <div class="s8_text_box2">
+                    <div class="row justify-content-center mb-2">
+                      <div class="col-lg-6 col-md-7 col-4">
+                        <div class="s8_title2 fw-600">優惠項目</div>
+                      </div>
+                    </div>
+                    <div class="s8_text2 fw-500">
+                      新客優惠: 凡預約美容項目享修護面膜體驗組
+                    </div>
+                    <div class="s8_text2 fw-500">
+                      舊客優惠: 當月壽星、新娘享優惠 $200
+                    </div>
+                    <div class="s8_text2 fw-500">
+                      轉介紹優惠: 凡介紹一名寶寶來店體驗享優惠 $200
+                    </div>
+                    <div class="s8_subtext2 fw-500 text-end">
+                      詳情請洽詢官方line, 資訊依官網為主
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="s8_bgbox3 bg-cover">
+                  <div class="s8_text_box3">
+                    <div class="row justify-content-center mb-2">
+                      <div class="col-lg-6 col-md-7 col-4">
+                        <div class="s8_title3 fw-600">預約須知</div>
+                      </div>
+                    </div>
+                    <div class="s8_text3 fw-500">
+                      新客預約需付訂金 $1000, 來店三次以上客人不需付訂金
+                    </div>
+                    <div class="s8_text3 fw-500">臨時取消不予退還訂金</div>
+                    <div class="s8_text3 fw-500">
+                      工作室無法攜伴, 請預留充足時間
+                    </div>
+                    <div class="s8_subtext3 fw-500 text-end">
+                      詳情請洽詢官方line, 資訊依官網為主
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s9">
+      <div class="container">
+        <div class="owl-carousel owl-theme">
+          <div class="s9_box1">
+            <div class="s9_img1 bg-cover text-center">
+              <div class="s9_text_box">
+                <div>#油畫美甲</div>
+                <div>#溫柔美甲</div>
+                <div>#凹凸ネイル</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">玩了一堆素材 💙🤍</div>
+            <div class="s9_subtext">| 客帶圖改款</div>
+          </div>
+
+          <div class="s9_box2">
+            <div class="s9_img2 bg-cover">
+              <div class="s9_text_box">
+                <div>#復古美甲</div>
+                <div>#小眾美甲</div>
+                <div>#過年美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">🧙🏻‍♂️🥀💫💙🤍</div>
+          </div>
+
+          <div class="s9_box3">
+            <div class="s9_img3 bg-cover">
+              <div class="s9_text_box">
+                <div>#暈染美甲</div>
+                <div>#日系美甲</div>
+                <div>#韓系美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">🥀🧡🤍</div>
+            <div class="s9_subtext">| 客帶圖改款</div>
+          </div>
+
+          <div class="s9_box4">
+            <div class="s9_img4 bg-cover">
+              <div class="s9_text_box">
+                <div>#暈染美甲</div>
+                <div>#日系美甲</div>
+                <div>#韓系美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">烏蘇拉的迷幻森林 🔮</div>
+          </div>
+
+          <div class="s9_box5">
+            <div class="s9_img5 bg-cover">
+              <div class="s9_text_box">
+                <div>#珍珠美甲</div>
+                <div>#復古美甲</div>
+                <div>#小清新美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">來自仙女星球 💜🦄</div>
+          </div>
+
+          <div class="s9_box6">
+            <div class="s9_img6 bg-cover">
+              <div class="s9_text_box">
+                <div>#暈染美甲</div>
+                <div>#日系美甲</div>
+                <div>#小眾美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">鐵器時代 🕵🏻⛏️</div>
+          </div>
+
+          <div class="s9_box7">
+            <div class="s9_img7 bg-cover">
+              <div class="s9_text_box">
+                <div>#暈染美甲</div>
+                <div>#溫柔美甲</div>
+                <div>#裸色系美甲</div>
+              </div>
+            </div>
+            <div class="s9_text mt-2">最美的模樣 🌊</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s10">
+      <div class="container">
+        <div class="s10_img1 bg-cover"></div>
+        <div class="s10_text_area">
+          <div class="s10_title fw-700">
+            Soley Studio
+          </div>
+          <div class="s10_text_box1">
+            <div class="s10_text_title">服務地區</div>
+            <div class="s10_text_content">台中西屯區 | 台灣大道坪頂站</div>
+            <div class="s10_text_content">台東市</div>
+          </div>
+          <div class="s10_text_box2">
+            <div class="s10_text_title">聯絡我們</div>
+            <div class="s10_text_content">ins: soley_studio</div>
+            <div class="s10_text_content">line: @12345678</div>
+          </div>
+          <div class="s10_text_box3">
+            <div class="s10_text_title">前往連結</div>
+            <div class="s10_text_content"><a href="http://soleylin.github.io/SoleyStudio">首頁</a></div>
+            <div class="s10_text_content"><a href="http://soleylin.github.io/SoleyStudio/nail.html">凝膠美甲</a></div>
+            <div class="s10_text_content"><a href="http://soleylin.github.io/SoleyStudio/face.html">臉部保養</a></div>
+          </div>
+          <div class="s10_text_box4">
+            <div class="s10_text_content"><a href="http://soleylin.github.io/SoleyStudio/eyebrow.html">霧眉</a></div>
+            <div class="s10_text_content"><a href="http://soleylin.github.io/SoleyStudio/member.html" id="footer_member">會員專區</a></div>
+          </div>
+        </div>
+        <div class="s10_footer_text text-end">
+          Copyright ©2024 All Rights Reserved. Design by SoleyLin
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="module" src="js/cookie.js"></script>
+    <script src="js/front/reg.js"></script>
+    <script type="module" src="js/front/login.js"></script>
+    <script type="module" src="js/front/logout.js"></script>
+    <script>
+      //WOW
+      new WOW().init();
+
+      //owl-carousel
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        responsive: {
+          0: {
+            items: 2,
+          },
+          768: {
+            items: 3,
+          },
+          992: {
+            items: 4,
+          },
+          1200: {
+            items: 4,
+          },
+          1400: {
+            items: 5,
+          },
+        },
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        nav: true,
+        navText: [
+          "<div class='owl-prev bg-cover'>",
+          "<div class='owl-next bg-cover'>",
+        ],
+      });
+    </script>
+  </body>
+</html>

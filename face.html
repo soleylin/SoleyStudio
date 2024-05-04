@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/myall.css" />
+    <link rel="stylesheet" href="css/front/modal.css" />
+    <link rel="stylesheet" href="css/front/face.css" />
+    <title>Soley Studio-臉部保養</title>
+  </head>
+  <body>
+    <section class="s1 bg-cover">
+      <div class="s1_logo bg-cover d-none d-lg-block"></div>
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio"
+                  >首頁</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/nail.html"
+                  >凝膠美甲</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/face.html"
+                  >臉部保養</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/eyebrow.html"
+                  >霧眉</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/feedback.html"
+                  >顧客回饋</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/cart.html"
+                  >購物車</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-700"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  會員專區
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_member"
+                      href="http://soleylin.github.io/SoleyStudio/member.html"
+                      >會員資料</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_reserve"
+                      href="http://soleylin.github.io/SoleyStudio/reserve.html"
+                      >預約服務</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-none"
+                      id="navbar_admin"
+                      href="http://soleylin.github.io/SoleyStudio/admin/home.html"
+                      >後臺資料</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <span class="h5 me-1 d-none" id="user_message">user</span>
+            <button class="btn btn-sm logout_btn d-none" id="logout_btn">
+              登出
+            </button>
+            <button
+              class="btn btn-sm login_btn"
+              id="login_btn"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              登入
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!--section1 Modal-login -->
+    <div
+      class="modal wow animate__fadeInDown"
+      data-memberModal="hidden"
+      data-wow-duration="0.8s"
+      data-wow-delay="0s"
+      data-wow-iteration="1"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-500" id="loginModalLabel">
+              會員登入
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="login_acc" class="form-label">帳號</label>
+              <input
+                type="text"
+                class="form-control"
+                id="login_acc"
+                name="login_acc"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="login_pwd" class="form-label">密碼</label>
+              <div class="inputWithin">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="login_pwd"
+                  name="login_pwd"
+                />
+                <button class="icon" id="login_icon1">
+                  <i class="fa-regular fa-eye-slash"></i>
+                </button>
+                <button class="icon d-none" id="login_icon2">
+                  <i class="fa-regular fa-eye icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn reg_btn text-primary"
+              id="reg_btn"
+              data-bs-toggle="modal"
+              data-bs-target="#regModal"
+            >
+              建立新帳號
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary fw-500"
+              data-bs-dismiss="modal"
+              id="login_cancel_btn"
+            >
+              取消
+            </button>
+            <button type="button" class="btn fw-500" id="login_ok_btn">
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section1 Modal-reg -->
+    <div
+      class="modal wow animate__fadeInDown"
+      data-memberModal="hidden"
+      data-wow-duration="0.8s"
+      data-wow-delay="0s"
+      data-wow-iteration="1"
+      id="regModal"
+      tabindex="-1"
+      aria-labelledby="regModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-500" id="regModalLabel">註冊會員</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body modalbody02_line timeline_section">
+            <div class="row">
+              <div class="col-6">
+                <h2>會員守則</h2>
+                <p>
+                  1.
+                  遵守當地的法律法規，包括但不限於消費者權益保護法、個人資料保護法等相關法規。
+                </p>
+                <p>2. 妥善保護自己的個人資料，不得散播、出售或洩漏給第三方。</p>
+                <p>
+                  3.
+                  尊重其他會員的權益，不得進行侵害他人權益的行為，包括但不限於誹謗、侮辱、恐嚇等行為。
+                </p>
+                <p>
+                  4.
+                  遵守網站或平台的相關規則，包括但不限於禁止發佈色情、暴力、種族歧視等不當內容的規定。
+                </p>
+                <p>
+                  5.
+                  正當使用網站或平台的資源，不得進行惡意攻擊、破壞系統等行為，以免影響其他用戶的使用權益。
+                </p>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="reg_agree_chk"
+                    name="reg_agree_chk"
+                  />
+                  <label class="form-check-label" for="reg_agree_chk"
+                    >同意</label
+                  >
+                </div>
+                <div class="text-danger" id="reg_agree_text"></div>
+              </div>
+              <div class="col-6">
+                <div class="mb-3">
+                  <label for="reg_userName" class="form-label">姓名</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="reg_userName"
+                    name="reg_userName"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="reg_acc" class="form-label">帳號</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="reg_acc"
+                    name="reg_acc"
+                    placeholder="帳號字數 5~15"
+                  />
+                  <div class="valid-feedback" id="reg_acc_text01"></div>
+                  <div class="invalid-feedback" id="reg_acc_text02"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_pwd" class="form-label">密碼</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="reg_pwd"
+                    name="reg_pwd"
+                    placeholder="密碼字數 5~15"
+                  />
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">字數不符合規定</div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_re_pwd" class="form-label">確認密碼</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="reg_re_pwd"
+                    name="reg_re_pwd"
+                  />
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">密碼輸入不一致</div>
+                </div>
+                <div class="mb-3">
+                  <label for="reg_tel" class="form-label">電話號碼</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="reg_tel"
+                    name="reg_tel"
+                  />
+                  <div class="valid-feedback" id="reg_tel_text01"></div>
+                  <div class="invalid-feedback" id="reg_tel_text02"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="reg_cancel_btn"
+            >
+              取消
+            </button>
+            <button type="button" class="btn" id="reg_ok_btn">確認註冊</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="s2">
+      <div class="container">
+        <div class="s2_title fw-700">臉部保養</div>
+        <div class="row s2_content">
+          <div class="col-md-3 s2_slidebar px-2">
+            <ul class="list-group my-3" id="itemList">
+              <!-- <li class="list-group-item my-2" id="faceItem" data-key="XXX">
+                <div class="d-flex">
+                  <div class="fw-700">肉芽</div>
+                </div>
+              </li>
+
+              <li class="list-group-item my-2">
+                <div class="d-flex">
+                  <div class="fw-700">肉芽</div>
+                </div>
+              </li>
+
+              <li class="list-group-item my-2">
+                <div class="d-flex">
+                  <div class="fw-700">肉芽</div>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <div class="col-md-9 s2_detail px-5">
+            <div class="row" id="List">
+              <!-- <div class="col-md-6 col-xl-4">
+                <div class="s2_box ms-auto me-auto">
+                  <div class="s2_bgbox"></div>
+                  <div class="s2_img">
+                    <img src="./image/front/face/深層.肉芽-1.jpg" alt="" />
+                  </div>
+                  <button class="btn mt-auto text-center fw-700">
+                    詳細資料
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- 頁碼 -->
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-9 text-center">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center" id="pageList">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer_img1 bg-cover"></div>
+        <div class="footer_text_area">
+          <div class="footer_title fw-700">Soley Studio
+          </div>
+          <div class="footer_text_box1">
+            <div class="footer_text_title">服務地區</div>
+            <div class="footer_text_content">台中西屯區 | 台灣大道坪頂站</div>
+            <div class="footer_text_content">台東市</div>
+          </div>
+          <div class="footer_text_box2">
+            <div class="footer_text_title">聯絡我們</div>
+            <div class="footer_text_content">ins: soley_studio</div>
+            <div class="footer_text_content">line: @12345678</div>
+          </div>
+          <div class="footer_text_box3">
+            <div class="footer_text_title">前往連結</div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio">首頁</a>
+            </div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/nail.html">凝膠美甲</a>
+            </div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/face.html">臉部保養</a>
+            </div>
+          </div>
+          <div class="footer_text_box4">
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/eyebrow.html">霧眉</a>
+            </div>
+            <div class="footer_text_content">
+              <a
+                href="http://soleylin.github.io/SoleyStudio/member.html"
+                id="footer_member"
+                >會員專區</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer_footer_text text-end">
+          Copyright ©2024 All Rights Reserved. Design by SoleyLin
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script type="module" src="js/cookie.js"></script>
+    <script src="js/front/reg.js"></script>
+    <script type="module" src="js/front/login.js"></script>
+    <script type="module" src="js/front/logout.js"></script>
+    <script src="js/front/face.js"></script>
+  </body>
+</html>

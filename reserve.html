@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/myall.css" />
+    <link rel="stylesheet" href="css/front/reserve.css" />
+    <title>Soley Studio-立即預約</title>
+  </head>
+  <body>
+    <section class="s1 bg-cover">
+      <div class="s1_logo bg-cover d-none d-lg-block"></div>
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/home.html"
+                  >首頁</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/nail.html"
+                  >凝膠美甲</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/face.html"
+                  >臉部保養</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/eyebrow.html"
+                  >霧眉</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/feedback.html"
+                  >顧客回饋</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-700"
+                  aria-current="page"
+                  href="http://soleylin.github.io/SoleyStudio/cart.html"
+                  >購物車</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-700"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  會員專區
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_member"
+                      href="http://soleylin.github.io/SoleyStudio/member.html"
+                      >會員資料</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      id="navbar_reserve"
+                      href="http://soleylin.github.io/SoleyStudio/reserve.html"
+                      >預約服務</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-none"
+                      id="navbar_admin"
+                      href="http://soleylin.github.io/SoleyStudio/admin/home.html"
+                      >後臺資料</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <span class="h5 me-1 d-none" id="user_message">user</span>
+            <button class="btn btn-sm logout_btn d-none" id="logout_btn">
+              登出
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="s2">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <div class="s2_title">立即預約</div>
+          </div>
+          <div class="col-lg-9 col-xl-8 col-xxl-7">
+            <div class="card">
+              <div class="card-body" id="dataList">
+                <div class="mb-4">
+                  <label for="userName" class="form-label">姓名</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="userName"
+                    name="userName"
+                    placeholder="請輸入姓名"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="tel" class="form-label">連絡電話</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="請輸入連絡電話"
+                    id="tel"
+                    name="tel"
+                  />
+                  <div class="invalid-feedback" id="tel_text"></div>
+                </div>
+                <div class="mb-4">
+                  <label for="itemList" class="form-label">預約項目</label>
+                  <select name="itemList" id="itemList" class="form-select">
+                    <option disabled selected>請選擇預約項目</option>
+                    <!-- <option value="itemId">serviceitem1</option>
+                    <option value="itemId">serviceitem2</option>
+                    <option value="itemId">serviceitem3</option> -->
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="time" class="form-label">預約時段</label>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <select name="dateList" id="dateList" class="form-select">
+                        <option disabled selected>請選擇預約日期</option>
+                        <!-- <option value="date">date1</option>
+                        <option value="date">date2</option>
+                        <option value="date">date3</option> -->
+                      </select>
+                    </div>
+                    <div class="col-md-7">
+                      <select name="timeList" id="timeList" class="form-select">
+                        <option disabled selected>請選擇預約時段</option>
+                        <!-- <option value="time">time1</option>
+                        <option value="time">time2</option>
+                        <option value="time">time3</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="remark_text">訂金付款帳號</div>
+                <div class="remark_text">中國信託(822) 0123456789</div>
+                <div class="text-end">
+                  <button class="btn" id="reserve_btn">確定預約</button>
+                </div>
+                <div class="remark_text text-end mt-2">
+                  預約相關規定詳見紛絲專頁
+                </div>
+                <div class="remark_text text-end">
+                  如欲預約美容教學諮詢, 請直接洽詢line官方帳號
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer_img1 bg-cover"></div>
+        <div class="footer_text_area">
+          <div class="footer_title fw-700">Soley Studio
+          </div>
+          <div class="footer_text_box1">
+            <div class="footer_text_title">服務地區</div>
+            <div class="footer_text_content">台中西屯區 | 台灣大道坪頂站</div>
+            <div class="footer_text_content">台東市</div>
+          </div>
+          <div class="footer_text_box2">
+            <div class="footer_text_title">聯絡我們</div>
+            <div class="footer_text_content">ins: soley_studio</div>
+            <div class="footer_text_content">line: @12345678</div>
+          </div>
+          <div class="footer_text_box3">
+            <div class="footer_text_title">前往連結</div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/home.html">首頁</a>
+            </div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/nail.html">凝膠美甲</a>
+            </div>
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/face.html">臉部保養</a>
+            </div>
+          </div>
+          <div class="footer_text_box4">
+            <div class="footer_text_content">
+              <a href="http://soleylin.github.io/SoleyStudio/eyebrow.html">霧眉</a>
+            </div>
+            <div class="footer_text_content" id="footer_member">
+              <a href="http://soleylin.github.io/SoleyStudio/member.html">會員專區</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_footer_text text-end">
+          Copyright ©2024 All Rights Reserved. Design by SoleyLin
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script type="module" src="js/front/logout.js"></script>
+    <script type="module" src="js/front/login.js"></script>
+    <script type="module" src="js/front/checkMember.js"></script>
+    <script src="js/front/reserve.js"></script>
+    <script type="module" src="js/front/reserveAdd.js"></script>
+  </body>
+</html>
