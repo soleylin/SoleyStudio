@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="../css/myall.css" />
+    <link rel="stylesheet" href="../css/admin/adminNav.css" />
+    <link rel="stylesheet" href="../css/admin/modal.css" />
+    <link rel="stylesheet" href="../css/admin/adminTable.css" />
+    <title>後臺管理</title>
+  </head>
+  <body>
+    <div class="s1">
+      <div class="container">
+        <div class="bar text-white">
+          <button
+            class="btn text-white"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasList"
+            aria-controls="offcanvasList"
+          >
+            <i class="fa-solid fa-bars fs-3"></i>
+          </button>
+
+          <span class="title">
+            <a
+              href="http://192.168.10.60/project/admin/home.html"
+              class="title text-white"
+              >後臺管理－</a
+            ></span
+          >
+          <span class="subtitle">會員層級</span>
+          <span class="ms-auto me-3 d-none" id="user_message">user</span>
+          <button class="btn btn-sm btn-warning d-none" id="logout_btn">
+            登出
+          </button>
+        </div>
+        <!-- offcanvas -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasList"
+          aria-labelledby="offcanvasListLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title text-white" id="offcanvasListLabel">
+              後臺列表
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="AdminList" id="AdminList">
+              <!-- <li class="AdminList-item active text-white">
+                <span>會員列表</span>
+              </li>
+              <li class="AdminList-item">
+                <a
+                  class="dropdown-toggle text-white"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  產品列表</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">預約總表</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">凝膠美甲</a></li>
+                  <li><a class="dropdown-item" href="#">霧眉</a></li>
+                  <li><a class="dropdown-item" href="#">臉部保養</a></li>
+                </ul>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container" id="content">
+        <div class="s2_list">
+          <button
+            class="btn add_btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#AddModal"
+          >
+            新增
+          </button>
+        </div>
+        <!-- table -->
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <table
+              class="table table-bordered table-hover table-sm table-rwd align-middle"
+            >
+              <thead class="table-dark">
+                <tr>
+                  <th class="text-center">名稱</th>
+                  <th class="text-center">代號</th>
+                  <th class="text-center">建檔時間</th>
+                  <th class="text-center">更新/刪除</th>
+                </tr>
+              </thead>
+              <tbody id="mybody">
+                <!-- <tr>
+                  <td data-th="名稱" class="tdc">名稱</td>
+                  <td data-th="代號" class="tdc">代號</td>
+                  <td data-th="建檔時間" class="tdc">建檔時間</td>
+                  <td data-th="更新/刪除" class="tdc">
+                    <button
+                      class="btn btn-success me-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#UpdateModal"
+                      data-id="XXX"
+                      data-name="XXX"
+                      data-code="XXX"
+                      id="update_btn"
+                    >
+                      更新
+                    </button>
+                    <button class="btn btn-danger" id="delete_btn" data-id="XXX">刪除</button>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Update Modal -->
+          <div
+            class="modal fade"
+            id="UpdateModal"
+            tabindex="-1"
+            aria-labelledby="UpdateModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- modal-header -->
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="UpdateModalLabel">
+                    更新會員級別
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <!-- modal-body -->
+                <div class="modal-body">
+                  <!-- 名稱 -->
+                  <div class="mb-3">
+                    <label for="upd_name" class="form-label">名稱</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="upd_name"
+                      name="upd_name"
+                    />
+                  </div>
+                  <!-- 代號 -->
+                  <div class="mb-3">
+                    <label for="upd_code" class="form-label">代號</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="upd_code"
+                      name="upd_code"
+                    />
+                  </div>
+                </div>
+                <!-- modal-footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-bs-dismiss="modal"
+                    id="modal_cancel_btn"
+                  >
+                    取消
+                  </button>
+                  <button type="button" class="btn" id="modal_update_btn">
+                    確認更新
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Modal -->
+        <div
+          class="modal fade"
+          id="AddModal"
+          tabindex="-1"
+          aria-labelledby="AddModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal-header -->
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="AddModalLabel">
+                  新增會員級別
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- modal-body -->
+              <div class="modal-body">
+                <!-- 名稱 -->
+                <div class="mb-3">
+                  <label for="add_name" class="form-label">名稱</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="add_name"
+                    name="add_name"
+                  />
+                </div>
+                <!-- 代號 -->
+                <div class="mb-3">
+                  <label for="add_code" class="form-label">代號</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="add_code"
+                    name="add_code"
+                  />
+                </div>
+              </div>
+              <!-- modal-footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-bs-dismiss="modal"
+                  id="modal_addcancel_btn"
+                >
+                  取消
+                </button>
+                <button type="button" class="btn" id="modal_add_btn">
+                  確認新增
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 頁碼 -->
+        <nav aria-label="Page navigation example" class="mt-5">
+          <ul class="pagination justify-content-center" id="pageList">
+            <!-- <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+      <!--container-->
+    </div>
+    <!--content-->
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script type="module" src="../js/admin/checkTopManager.js"></script>
+    <script src="../js/admin/adminNavHTML.js"></script>
+    <script type="module" src="../js/admin/level/levelList.js"></script>
+    <script type="module" src="../js/admin/level/levelUpdate.js"></script>
+    <script src="../js/admin/level/levelAdd.js"></script>
+    <script type="module" src="../js/front/logout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="../css/myall.css" />
+    <link rel="stylesheet" href="../css/admin/modal.css" />
+    <link rel="stylesheet" href="../css/admin/home.css" />
+
+    <title>後臺管理</title>
+  </head>
+  <body>
+    <div class="s2">
+      <div class="row gx-0">
+        <div class="col-2 pe-3 slideBar_area">
+          <div class="slideBar">
+            <div class="slideBar_inner">
+              <ul class="AdminList" id="AdminList">
+                XX
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 pe-5 ps-2 content">
+          <div class="bar">
+            <div class="row">
+              <div class="col-6">
+                <div class="title">
+                  <a
+                    href="http://192.168.10.60/project/admin/home.html"
+                    class="title"
+                    >後臺管理</a
+                  >
+                </div>
+              </div>
+              <div class="col-6 text-end pe-4 pt-2 home_logout d-none">
+                <span class="me-3" id="user_message">user</span>
+                <button class="btn btn-sm btn-warning" id="logout_btn">
+                  登出
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row gx-0">
+            <div class="col-sm-6 col-xxl-3 px-2">
+              <div class="box01 p-3 align-content-center">
+                <div class="row px-2">
+                  <div class="col-8">
+                    <div class="num_text fw-700 counter01">200</div>
+                    <div class="title_text fw-700">會員總數</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="icon01"><i class="fa-solid fa-users"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xxl-3 px-2">
+              <div class="box02 p-3 align-content-center">
+                <div class="row px-2">
+                  <div class="col-8">
+                    <div class="num_text fw-700 counter02">100</div>
+                    <div class="title_text fw-700">本月消費人數</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="icon02">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xxl-3 px-2">
+              <div class="box03 p-3 align-content-center">
+                <div class="row px-2">
+                  <div class="col-8">
+                    <div class="num_text fw-700 counter03">100</div>
+                    <div class="title_text fw-700">本月營收</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="icon03">
+                      <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xxl-3 px-2">
+              <div class="box04 p-3 align-content-center">
+                <div class="row px-2">
+                  <div class="col-8">
+                    <div class="num_text fw-700 counter04">100</div>
+                    <div class="title_text fw-700">本月回訪率</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="icon03">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gx-0 pt-4">
+            <div class="col-md-7 px-2">
+              <div class="card">
+                <div class="card-body">
+                  <canvas id="priceChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 px-2">
+              <div class="card">
+                <div class="card-body">
+                  <canvas id="memberChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gx-0 pt-4">
+            <div class="col-md-7 px-2">
+              <div class="card">
+                <div class="card-body">
+                  <canvas id="itemChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 px-2">
+              <div class="card">
+                <div class="card-body over-flow-hidden">
+                  <div class="title pb-2">最新預約</div>
+                  <div id="reserve_content">
+                    <div class="row reserve_content">
+                      <div class="col-md-2 icon">
+                        <i class="fa-solid fa-palette"></i>
+                      </div>
+                      <div class="col-md-3 userName">userName</div>
+                      <div class="col-md-3 item">Item</div>
+                      <div class="col-md-4 date">Date</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gx-0 pt-4">
+            <div class="col-md-6 px-2">
+              <div class="card">
+                <div class="card-body">
+                  <canvas id="materialChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 px-2">
+              <div class="card">
+                <div class="card-body">
+                  <canvas id="colorChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/admin/adminNavHTML.js"></script>
+    <script type="module" src="../js/admin/home.js"></script>
+    <script type="module" src="../js/front/logout.js"></script>
+  </body>
+</html>
