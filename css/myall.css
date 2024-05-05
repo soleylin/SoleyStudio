@@ -1,0 +1,171 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+:root {
+  --mycolor000:#ffffff00;
+  --mycolor00: #000000;
+  --mycolor01: #ffffff;
+  --mycolor02: #ece4e2;
+  --mycolor03: #fcd3d1;
+  --mycolor04: #ad5173;
+  --mycolor05: #fe929f;
+  --mycolor06: #e3a6a1;
+  --mycolor07: #bc5f6a;
+  --mycolor08: #19b3b1;
+  --mycolor09: #034b61;
+  --mycolor10: #fddcef;
+  --mycolor11: #d5c5e9;
+  --mycolor12: #3a5a69;
+  --mycolor13: #030923;
+  --mycolor14: #7f97bb;
+  --mycolor15: #20646133;
+  --mycolor16: #2c8f8a50;
+  --mycolor17: #fcd3d18a;
+  --mycolor18: #2e4b4970;
+  --mycolor19: #070c0c4f;
+  --mycolor20: #a8deee;
+  --mycolor21: #6626b9;
+  --mycolor22: #f5a517;
+  --mycolor23: #f4c323;
+  --mycolor24: #705429;
+  --mycolor25: #a23d31;
+  --mycolor26: #000000;
+  --mycolor27: #f2f3db;
+  --mycolor28: #9b2424;
+  --mycolor29: #aec9a4;
+  --mycolor30: #40494b;
+  --mycolor31: #c5c5c5;
+  --mycolor32: #b89c78;
+  --bgcolor33: #0000004d;
+  --bgcolor34: #f0d8b733;
+  --bgcolor35: #f0d8b799;
+  --bgcolor36: #f8ebd39c;
+  --bgcolor37: #fff6ec;
+  --mycolor38: #8d6c45;
+  --mycolor39: #fbcb93;
+  --mycolor40: #f2d9b3;
+  --mycolor41: #d2ab89;
+  --mycolor42: #f5c497;
+  --mycolor43: #7d6868d9;
+  --mycolor44: #7d68683d;
+  --mycolor45: #c59a7a;
+  --mycolor46: #9e977d;
+  --mycolor47: #e3d8bd;
+  --mycolor48: #e4e4e491;
+  --mycolor49: #fff2e3;
+  --mycolor50: #ffd7ab;
+  --mycolor51: #7c7c7c;
+  --mycolor52: #524242;
+  --mycolor53: #524242bf;
+  --mycolor54: #9f855e;
+  --mycolor55: #746a6a;
+  --mycolor56: #dd930a;
+  --mycolor57: #827878;
+  --mycolor58: #d4cdc6;
+  --mycolor59: #b0a092;
+  --mycolor60: #4f4b3e;
+  --mycolor61: #292827a2;
+  /* shadow */
+  --mycolor62: #6e6d6dd7;
+  --mycolor63: #938d8dcc;
+  --mycolor64: #b1a6a6cc;
+  --mycolor65: #575555;
+  --mycolor66: #846f50;
+  --mycolor67: #f3cb90;
+  /* line */
+  --mycolor68: #dee2e6;
+  --mycolor69: #9E5757;
+  /* shadow */
+  --mycolor70: #6e6d6d98;
+  --mycolor71: #99541433;
+  --mycolor72: #D2AB88;
+  --mycolor73: #f2e9dd;
+  --mycolor74: #7d6868;
+  --mycolor75: #b1a6a671;
+  --mycolor76: #2d8f92;
+  --mycolor77: #814747;
+  --mycolor78: #1c5f61;
+  --mycolor79: #5286c9;
+  --mycolor80: #2a548b;
+  --mycolor81: #0069cc;
+  --mycolor82: #aad1f7;
+  --mycolor83: #eee9bd;
+  --mycolor84: #bdeebd;
+  --mycolor85: #fdd9c8;
+  --mycolor86: #2c2e3d;
+}
+
+body {
+  font-family: "Zen Maru Gothic", serif;
+}
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+.mr-1 {
+  margin-right: 1px;
+}
+
+.mr-2 {
+  margin-right: 2px;
+}
+
+.mr-3 {
+  margin-right: 3px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+

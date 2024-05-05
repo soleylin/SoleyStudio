@@ -1,0 +1,20 @@
+#UpdateModal .modal-header,
+#AddModal .modal-header, #regModal .modal-header, #DoneModal .modal-header {
+  background-color: var(--mycolor00);
+  color: var(--mycolor01);
+}
+
+#UpdateModal #modal_update_btn,
+#AddModal #modal_add_btn, #regModal #reg_ok_btn, #DoneModal #modal_done_btn {
+  background-color: var(--mycolor40);
+}
+
+#UpdateModal #modal_update_btn:hover,
+#AddModal #modal_add_btn:hover, #regModal #reg_ok_btn:hover,
+#DoneModal #modal_done_btn:hover {
+  background-color: var(--mycolor67);
+}
+
+.modal{
+  margin-top: 50px;
+}

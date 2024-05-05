@@ -1,0 +1,163 @@
+.tdc {
+  text-align: center;
+}
+
+.active-switch {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#user_message {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.imgList {
+  width: 150px;
+  height: auto;
+}
+
+#delete_btn {
+  background-color: var(--mycolor69);
+  border-color: var(--mycolor69);
+}
+
+#delete_btn:hover {
+  background-color: var(--mycolor77);
+  border-color: var(--mycolor77);
+}
+
+.swal2-confirm {
+  background-color: var(--mycolor74) !important;
+}
+
+.s2_list {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.s2 .btn_col {
+  width: 77px;
+}
+
+.s2 .chk_col {
+  display: flex;
+  align-items: center;
+}
+.s2 .input_chk {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.add_btn_div{
+  width: 85px;
+}
+
+.search_div{
+  width: 270px;
+}
+
+.submit{
+  border: 1px solid var(--mycolor76);
+  color: var(--mycolor76);
+  background-color: var(--mycolor000);
+  font-weight: 500;
+}
+.submit:hover{
+  color: var(--mycolor01);
+  background-color: var(--mycolor76);
+}
+
+#update_btn{
+  background-color: var(--mycolor76);
+  color: var(--mycolor01);
+  border-color: var(--mycolor76);
+}
+
+#update_btn:hover{
+  background-color: var(--mycolor78);
+}
+
+#done_btn{
+  background-color: var(--mycolor79);
+  color: var(--mycolor01);
+}
+
+#done_btn:hover{
+  background-color: var(--mycolor80);
+}
+@media screen and (max-width: 768px) {
+  .tdc {
+    text-align: left;
+  }
+
+  .table-rwd thead {
+    display: none;
+  }
+
+  .table-rwd tbody tr {
+    display: block;
+    border: 2px solid var(--mycolor12);
+    margin-top: 20px;
+  }
+
+  .table-rwd tbody tr td {
+    display: block;
+    overflow: hidden;
+  }
+
+  .table-rwd tbody tr td::before {
+    content: attr(data-th) " : ";
+    color: var(--mycolor80);
+    font-weight: 900;
+    display: block;
+    float: left;
+    width: 7em;
+    text-align: right;
+    padding-right: 1em;
+  }
+
+  .s2_list {
+    margin-bottom: 0px;
+  }
+
+  .s2 .add_btn,
+  .s2 #searchList,
+  .s2 #numberList {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .s2 .numberList_col {
+    margin-right: 0 !important;
+    margin-left: 17px !important;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .s2 .itemNo,
+  .s2 .active,
+  .s2 .created,
+  .s2 .avgPrice,
+  .s2 .recent {
+    position: relative;
+  }
+
+  .s2 .sort_up,
+  .s2 .sort_down {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .s2 .created .sort_up,
+  .s2 .created .sort_down {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

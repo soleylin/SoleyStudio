@@ -1,0 +1,57 @@
+#loginModal .modal-header,
+#regModal .modal-header {
+  background-color: var(--mycolor66);
+  color: var(--mycolor01);
+}
+
+#loginModal #login_ok_btn,
+#regModal #reg_ok_btn {
+  background-color: var(--mycolor40);
+}
+
+#loginModal #login_ok_btn:hover,
+#regModal #reg_ok_btn:hover {
+  background-color: var(--mycolor67);
+}
+
+.reg_btn {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding-top: 0;
+}
+
+#loginModal .modal-footer {
+  position: relative;
+}
+
+.timeline_section{
+position: relative;
+}
+.timeline_section::before{
+  position: absolute;
+  content: "";
+  top: 20px;
+  bottom: 15px;
+  width: 1px;
+  background-color: var(--mycolor31);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal{
+  margin-top: 115px;
+}
+
+
+.inputWithin{
+  position: relative !important;
+}
+
+.inputWithin .icon{
+  position: absolute !important;
+  right: 6px;
+  top: 5px;
+  border: unset;
+  background-color: unset;
+}

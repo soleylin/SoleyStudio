@@ -1,0 +1,316 @@
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  background-color: var(--bgcolor37);
+}
+
+.s1 {
+  height: 245px;
+  background-image: url(../../image/front/home/tomoko-40.png);
+  position: relative;
+}
+
+.s1_logo {
+  background-image: url(../../image/front/home/logo3.png);
+  height: 199px;
+  width: 161px;
+  position: absolute;
+  top: 25px;
+  left: 150px;
+}
+
+.s1 .navbar .nav-item,
+.s1 #user_message,
+.login_btn,
+.logout_btn {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.s1 #user_message {
+  color: var(--mycolor69);
+}
+
+.s1 .nav-item .nav-link:hover {
+  color: var(--mycolor00);
+  border-bottom: 1px solid var(--mycolor00);
+}
+
+.login_btn:hover,
+.logout_btn:hover {
+  background-color: var(--mycolor65);
+  color: var(--mycolor01);
+}
+
+.s2_title {
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  letter-spacing: 10px;
+}
+
+.s2_select {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.selectList select {
+  background-color: var(--mycolor75);
+}
+
+.s2_box {
+  position: relative;
+  height: 330px;
+  width: 259px;
+  margin-bottom: 110px;
+}
+
+.s2 img {
+  height: 224px;
+  width: 224px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 2px var(--mycolor70);
+  position: absolute;
+  left: 15px;
+}
+
+.s2_bgbox {
+  height: 157px;
+  width: 259px;
+  background-color: var(--mycolor000);
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  position: absolute;
+  bottom: 80px;
+  left: 0px;
+}
+
+.s2_img,
+.s2_bgbox {
+  transition: all 0.5s ease-in-out;
+}
+
+.s2_box:hover>.s2_img {
+  transform: translate(0, -40px);
+}
+
+.s2_box:hover>.s2_bgbox {
+  background-color: var(--mycolor71);
+}
+
+.s2 .btn {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  width: 224px;
+  background-color: var(--mycolor72);
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+
+.s2 .btn:hover {
+  background-color: var(--mycolor42);
+  color: var(--mycolor00);
+}
+
+#pageList .page-item .page-link {
+  background-color: var(--mycolor000);
+  color: var(--mycolor00);
+  border: unset;
+  font-size: 20px;
+}
+
+#pageList .page-item .page-link:hover {
+  border-radius: 5px;
+}
+
+#pageList .page-item .page-link.active {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 200px;
+  height: 350px;
+  background-color: var(--mycolor01);
+}
+
+.footer .container {
+  position: relative;
+}
+
+.footer_img1 {
+  background-image: url(../../image/front/home/footer.png);
+  width: 376px;
+  height: 227px;
+  position: absolute;
+  right: 0;
+  top: -110px;
+}
+
+.footer_title {
+  font-size: 24px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.footer_subtitle {
+  font-style: oblique;
+  font-family: "Yellowtail", cursive;
+  letter-spacing: 3px;
+}
+
+.footer_text_box1 {
+  position: absolute;
+  top: 110px;
+  left: 40px;
+}
+
+.footer_text_box2 {
+  position: absolute;
+  top: 110px;
+  left: 300px;
+}
+
+.footer_text_box3 {
+  position: absolute;
+  top: 110px;
+  left: 500px;
+}
+
+.footer_text_box4 {
+  position: absolute;
+  top: 155px;
+  left: 630px;
+}
+
+.footer_text_title {
+  font-size: 17px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer_text_content {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer_text_area {
+  height: 270px;
+  border-bottom: 1px solid var(--mycolor64);
+}
+
+.footer_footer_text {
+  font-size: 12px;
+}
+
+.footer a {
+  color: var(--mycolor00);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .s1 {
+    height: unset;
+    background-image: unset;
+  }
+
+  .navbar {
+    background-image: url(../../image/front/home/tomoko-nav.png);
+
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    color: var(--mycolor56);
+    border: 0px;
+  }
+
+  .s1 .navbar .dropdown-menu {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+
+  .s2_title {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .s2_select {
+    margin-top: 20px;
+    margin-left: 20px;
+
+  }
+
+  .footer {
+    height: 430px;
+    margin-top: 130px;
+  }
+
+  .footer_img1 {
+    width: 220px;
+    height: 132px;
+    top: -60px;
+  }
+
+  .footer_title {
+    left: 20px;
+  }
+
+  .footer_text_box1 {
+    left: 20px;
+  }
+
+  .footer_text_box2 {
+    left: 230px;
+  }
+
+  .footer_text_box3 {
+    top: 250px;
+    left: 20px;
+  }
+
+  .footer_text_box4 {
+    top: 295px;
+    left: 110px;
+  }
+
+  .footer_text_area {
+    height: 380px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .s1 {
+    height: 105px;
+  }
+
+  .s1 .navbar .nav-item {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .s1 #user_message,
+  .login_btn,
+  .logout_btn {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .footer_img1 {
+    width: 300px;
+    height: 180px;
+    top: -90px;
+  }
+
+  .footer_text_box4 {
+    left: 590px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .s1_logo {
+    left: 25px;
+  }
+}
