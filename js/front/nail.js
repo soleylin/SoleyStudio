@@ -7,7 +7,7 @@ var pageNumber = 8;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/member/nail-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/member/nail-Read.php",
     dataType: "json",
     async: false,
     success: showdataProduct,

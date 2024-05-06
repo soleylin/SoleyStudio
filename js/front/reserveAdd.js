@@ -57,7 +57,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/member/reserve-Create.php",
+        url: "https://soleystudio.000webhostapp.com/api/member/reserve-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataReserve,

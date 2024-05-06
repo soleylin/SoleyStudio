@@ -8,7 +8,7 @@ $(function () {
     dataJSON["uid01"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/member/member-LoginUid.php",
+      url: "https://soleystudio.000webhostapp.com/api/member/member-LoginUid.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,
@@ -45,7 +45,7 @@ $(function () {
     dataJSON["password"] = $("#login_pwd").val();
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/member/member-Login.php",
+      url: "https://soleystudio.000webhostapp.com/api/member/member-Login.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_login,

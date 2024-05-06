@@ -26,7 +26,7 @@ $(function () {
 
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/serviceItem/serviceItem-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,
@@ -99,7 +99,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/reserve/reserve-Delete.php",
+          url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserve-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -244,7 +244,7 @@ function clear_data() {
 function read() {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/reserve/reserve-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserve-Read.php",
     dataType: "json",
     async: false,
     success: showdataReserve,

@@ -26,7 +26,7 @@ $(function () {
 
     $.ajax({
       type: "GET",
-      url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/faceItem/faceItem-Read.php",
+      url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
       dataType: "json",
       async: false,
       success: showdataFaceItem,
@@ -91,7 +91,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/record/record-Update.php",
+        url: "https://soleystudio.000webhostapp.com/api/manager/record/record-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataRecord_upd,
@@ -152,7 +152,7 @@ function update_data() {
   clear_data();
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/SoleyStudio/api/manager/record/record-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/record/record-Read.php",
     dataType: "json",
     async: false,
     success: showdataRecord,
