@@ -1,7 +1,7 @@
 <?php
-// header ("Access -Control-Allow-Origin: https://soleylin.github.io/SoleyStudio/");
+ header ("Access-Control-Allow-Origin: https://soleylin.github.io/SoleyStudio/*");
 $servername = "localhost";
-$username = "soley";
+$username = "id22010393_soley";
 $password = "Fdio3_dine";
 $dbname = "id22010393_soleystudio";
 
