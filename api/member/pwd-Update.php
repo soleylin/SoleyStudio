@@ -13,9 +13,9 @@ if ($data != "") {
         $pwd = password_hash($mydata["password"], PASSWORD_DEFAULT);
 
         $servername = "localhost";
-        $username = "soley";
-        $password = "123";
-        $dbname = "demodb";
+        $username = "id22010393_soley";
+        $password = "Fdio3_dine";
+        $dbname = "id22010393_soleystudio";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
 

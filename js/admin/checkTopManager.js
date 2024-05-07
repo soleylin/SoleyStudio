@@ -55,7 +55,7 @@ function showdata_loginUid(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/admin/home.html";
+        location.href = "https://soleystudio.000webhostapp.com/admin/home.html";
       }
     });
   } else {

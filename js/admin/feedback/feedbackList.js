@@ -135,7 +135,7 @@ function showdata_delete(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/admin/feedback.html";
+        location.href = "https://soleystudio.000webhostapp.com/admin/feedback.html";
       }
     });
   }
@@ -161,7 +161,7 @@ function drawTable(page) {
 
   newData[page].forEach(function (item) {
     var strHTML =
-      '<tr><td data-th="圖檔" class="tdc"><img src="/project/image/admin/feedback/' +
+      '<tr><td data-th="圖檔" class="tdc"><img src="https://soleystudio.000webhostapp.com/image/admin/feedback/' +
       item.image +
       '" alt="" class="mt-3" style="height: 300px" /></td><td data-th="建檔時間" class="tdc">' +
       item.created_at +

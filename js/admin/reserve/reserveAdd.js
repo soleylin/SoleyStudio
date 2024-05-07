@@ -200,7 +200,7 @@ function showdataReserve(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/admin/reserveList.html";
+        location.href = "https://soleystudio.000webhostapp.com/admin/reserveList.html";
       }
     });
   } else {

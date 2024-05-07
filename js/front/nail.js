@@ -79,11 +79,11 @@ function drawTable(page) {
 
   newData[page].forEach(function (item) {
     var strHTML =
-      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img"><a href="http://192.168.10.60/project/image/admin/product/' +
+      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img"><a href="https://soleystudio.000webhostapp.com/image/admin/product/' +
       item.image +
       '" data-lightbox="itemImage"data-title="' +
       item.name +
-      '"><img src="/project/image/admin/product/' +
+      '"><img src="https://soleystudio.000webhostapp.com/image/admin/product/' +
       item.image +
       '" alt="" /></a></div><button class="btn mt-auto text-center fw-700">詳細資料</button></div></div>';
 

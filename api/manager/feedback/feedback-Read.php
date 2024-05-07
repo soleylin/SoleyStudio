@@ -1,5 +1,4 @@
 <?php
-
 header("Access-Control-Allow-Origin: https://soleylin.github.io");
 $servername = "localhost";
 $username = "soley";

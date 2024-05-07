@@ -136,9 +136,9 @@ function drawdata(page) {
   //渲染產品
   newData[page].forEach(function (item) {
     var strHTML =
-      '<div class="col-md-6 col-xl-4"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img"><img src="/project/image/admin/product/' +
+      '<div class="col-md-6 col-xl-4"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img"><img src="https://soleystudio.000webhostapp.com/image/admin/product/' +
       item.image +
-      '" alt="" /></div><a href="http://192.168.10.60/project/image/admin/product/' +
+      '" alt="" /></div><a href="https://soleystudio.000webhostapp.com/image/admin/product/' +
       item.image +
       '" data-lightbox="itemImage"><button class="btn mt-auto text-center fw-700">放大查看</button></a></div></div>';
     $("#List").append(strHTML);

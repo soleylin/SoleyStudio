@@ -296,7 +296,7 @@ function showdata_delete(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/admin/product.html";
+        location.href = "https://soleystudio.000webhostapp.com/admin/product.html";
       }
     });
   }
@@ -329,7 +329,7 @@ function drawTable(page) {
       item.serviceName +
       '</td><td data-th="名稱" class="tdc">' +
       item.name +
-      '</td><td data-th="圖片" class="tdc"> <img src="/project/image/admin/product/' +
+      '</td><td data-th="圖片" class="tdc"> <img src="https://soleystudio.000webhostapp.com/image/admin/product/' +
       item.image +
       '" alt="" class="mt-1 mb-1 bg-cover imgList" ></td><td data-th="價格" class="tdc">' +
       priceComma +

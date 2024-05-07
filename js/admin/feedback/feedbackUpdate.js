@@ -14,7 +14,7 @@ $(function () {
     $("#upd_image").val("");
     $("#upd_prevImg").attr(
       "src",
-      "http://192.168.10.60/project/image/admin/feedback/" +
+      "https://soleystudio.000webhostapp.com/image/admin/feedback/" +
         $(this).data("image")
     );
 
