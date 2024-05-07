@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from " https://soleylin.github.io/SoleyStudio/js/cookie.js";
 var flag_name = false;
 var flag_tel = false;
 var flag_itemId = false;

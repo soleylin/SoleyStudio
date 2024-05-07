@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from " https://soleylin.github.io/SoleyStudio/js/cookie.js";
 var upd_id = getCookie("u_id");
 var flag_oldpwd = false;
 var flag_pwd = false;
