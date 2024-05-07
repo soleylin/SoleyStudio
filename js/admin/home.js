@@ -1,4 +1,4 @@
-import { getCookie } from "SoleyStudio/js/cookie.js";
+import { getCookie } from "/SoleyStudio/js/cookie.js";
 var consumptionNum;
 var chartMember;
 var chartPrice;
