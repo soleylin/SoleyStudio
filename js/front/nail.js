@@ -12,7 +12,7 @@ $(function () {
     async: false,
     success: showdataProduct,
     error: function () {
-      Swal.fire("系統串接錯誤！- XXXmember/nail-Read.php");
+      Swal.fire("系統串接錯誤！- member/nail-Read.php");
     },
   });
 
