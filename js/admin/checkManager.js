@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from "SoleyStudio/js/cookie.js";
 $(function () {
   //判斷是否有uidCookie
   if (getCookie("uid") != "") {
