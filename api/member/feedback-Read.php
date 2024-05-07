@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: https://soleylin.github.io");
+header("Access-Control-Allow-Origin: https://soleylin.github.io");
 $servername = "localhost";
 $username = "soley";
 $password = "Fdio3_dine";
