@@ -1,5 +1,5 @@
-import { setCookie } from " https://soleylin.github.io/SoleyStudio/js/cookie.js";
-import { getCookie } from " https://soleylin.github.io/SoleyStudio/js/cookie.js";
+import { setCookie } from "/js/cookie.js";
+import { getCookie } from "/js/cookie.js";
 $(function () {
   //判斷是否有uidCookie
   if (getCookie("uid") != "") {

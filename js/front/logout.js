@@ -1,4 +1,4 @@
-import { setCookie } from " https://soleylin.github.io/SoleyStudio/js/cookie.js";
+import { setCookie } from "/js/cookie.js";
 $(function () {
   //監聽 #logout_btn
   $("#logout_btn").click(function () {
