@@ -1,4 +1,4 @@
-import { getCookie } from "/project/js/cookie.js";
+import { getCookie } from "/js/cookie.js";
 var upd_id = getCookie("u_id");
 var flag_tel = true;
 $(function () {

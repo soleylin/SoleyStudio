@@ -1,4 +1,4 @@
-import { getCookie } from "/project/js/cookie.js";
+import { getCookie } from "/js/cookie.js";
 $(function () {
   //判斷是否有uidCookie
   if (getCookie("uid") != "") {
@@ -25,7 +25,7 @@ $(function () {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/home.html";
+        location.href = "https://soleystudio.000webhostapp.com/";
       }
     });
   }
@@ -42,7 +42,7 @@ function showdata_loginUid(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://192.168.10.60/project/home.html";
+        location.href = "https://soleystudio.000webhostapp.com/";
       }
     });
   } else {

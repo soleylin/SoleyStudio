@@ -1,5 +1,5 @@
-import { setCookie } from "/project/js/cookie.js";
-import { getCookie } from "/project/js/cookie.js";
+import { setCookie } from "/js/cookie.js";
+import { getCookie } from "/js/cookie.js";
 $(function () {
   //判斷是否有uidCookie
   if (getCookie("uid") != "") {

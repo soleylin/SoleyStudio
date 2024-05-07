@@ -1,4 +1,4 @@
-import { getCookie } from "/project/js/cookie.js";
+import { getCookie } from "/js/cookie.js";
 var flag_name = false;
 var flag_tel = false;
 var flag_itemId = false;
