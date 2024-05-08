@@ -52,7 +52,7 @@ $(function () {
         processData: false,
         success: showdataImage,
         error: function () {
-          alert("erroe-- manager/image/feedbackImage-Create.php");
+          alert("error-- manager/image/feedbackImage-Create.php");
         },
       });
     } else {

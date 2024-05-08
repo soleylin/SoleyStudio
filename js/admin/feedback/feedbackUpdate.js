@@ -49,7 +49,7 @@ $(function () {
           processData: false,
           success: showdataImage_upd,
           error: function () {
-            alert("erroe-- manager/image/feedbackImage-Create.php");
+            alert("error-- manager/image/feedbackImage-Create.php");
           },
         });
       } else if (flag_image == "") {

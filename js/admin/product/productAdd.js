@@ -108,7 +108,7 @@ $(function () {
         processData: false,
         success: showdataImage,
         error: function () {
-          alert("erroe-- manager/image/productImage-Create.php");
+          alert("error-- manager/image/productImage-Create.php");
         },
       });
     } else {

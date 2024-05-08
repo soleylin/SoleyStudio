@@ -126,7 +126,7 @@ $(function () {
         processData: false,
         success: showdataImage_upd,
         error: function () {
-          alert("erroe-- manager/image/productImage-Create.php");
+          alert("error-- manager/image/productImage-Create.php");
         },
       });
     } else if (flag_image == "") {
