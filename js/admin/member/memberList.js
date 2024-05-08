@@ -359,7 +359,7 @@ function read() {
   dataJSON["sort"] = selected_sort;
 
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "https://soleystudio.000webhostapp.com/api/manager/member/member-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
