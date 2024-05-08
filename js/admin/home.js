@@ -1,4 +1,3 @@
-import { getCookie } from "/js/cookie.js";
 var consumptionNum;
 var chartMember;
 var chartPrice;
@@ -438,4 +437,20 @@ function showdata_loginUid(data) {
     $(".home_logout").addClass("d-block");
     $("#user_message").text(data.data[0].userName);
   }
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
