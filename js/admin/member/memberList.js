@@ -116,7 +116,7 @@ $(function () {
           dataType: "json",
           success: showdata_delete,
           error: function () {
-            Swal.fire("error-- manager/member/member-Delete.php"+$(this).data("id"));
+            Swal.fire("error-- manager/member/member-Delete.php");
           },
         });
       }
