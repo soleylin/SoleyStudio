@@ -37,7 +37,7 @@ $(function () {
   });
 
   //監聽 #delete_btn
-  $("#mybody #delete_btn").click(function () {
+  $("body").on("click", " #mybody #delete_btn", function () {
     Swal.fire({
       title: "確認要刪除這筆資料嗎?",
       showDenyButton: true,
