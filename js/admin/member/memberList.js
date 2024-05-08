@@ -109,6 +109,7 @@ $(function () {
         var dataJSON = {};
         dataJSON["id"] = $(this).data("id");
 
+        console.log($(this).data("id"));
         $.ajax({
           type: "POST",
           url: "https://soleystudio.000webhostapp.com/api/manager/member/member-Delete.php",
@@ -117,7 +118,6 @@ $(function () {
           success: showdata_delete,
           error: function () {
             Swal.fire("error-- manager/member/member-Delete.php");
-            console.log($(this).data("id"));
           },
         });
       }
