@@ -11,6 +11,7 @@ if ($data != "") {
         $image = $mydata["image"];
         $location = "/var/www/html/project/image/admin/product/" . $image;
 
+        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";

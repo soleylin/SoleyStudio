@@ -9,12 +9,14 @@ if ($data != "") {
 
         $sort = $mydata["sort"];
 
+        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
         $dbname = "id22010393_soleystudio";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
+        
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }

@@ -13,6 +13,7 @@ if ($data != "") {
         $image = $mydata["image"];
         $oldImage = $mydata["oldImage"];
 
+        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
