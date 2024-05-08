@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $mydata[] = $row;
     }
-    echo '{"state": true, "itemId":' . json_encode($itemId) . ', "data":' . json_encode($mydata) . ', "message":"資料查詢成功"}';
+    echo '{"state": true, "data":' . json_encode($mydata) . ', "message":"資料查詢成功"}';
 } else {
     echo '{"state": false, "message":"查無資料"}';
 }
