@@ -179,7 +179,7 @@ function showdata_delete(data) {
     }).then((result) => {
       if (result.isConfirmed) {
         location.href =
-          "https://soleystudio.000webhostapp.com/admin/faceItem.html";
+          "https://soleylin.github.io/SoleyStudio/admin/faceItem.html";
       }
     });
   }
@@ -240,7 +240,7 @@ function showdata(data) {
     }).then((result) => {
       if (result.isConfirmed) {
         location.href =
-          "https://soleystudio.000webhostapp.com/admin/faceItem.html";
+          "https://soleylin.github.io/SoleyStudio/admin/faceItem.html";
       }
     });
   } else {
