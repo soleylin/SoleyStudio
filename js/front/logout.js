@@ -13,7 +13,7 @@ $(function () {
       if (result.isConfirmed) {
         setCookie("uid", "", 7);
         setCookie("u_id", "", 7);
-        location.href = "https://soleystudio.000webhostapp.com/";
+        location.href = "https://soleylin.github.io/SoleyStudio";
       }
     });
   });

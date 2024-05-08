@@ -47,7 +47,7 @@ function showdata(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleystudio.000webhostapp.com/admin/serviceItem.html";
+        location.href = "https://soleylin.github.io/SoleyStudio/admin/serviceItem.html";
       }
     });
   } else {

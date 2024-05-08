@@ -156,7 +156,7 @@ function showdata_memberPwd_update(data) {
       confirmButtonText: "確定",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleystudio.000webhostapp.com/member.html";
+        location.href = "https://soleylin.github.io/SoleyStudio/member.html";
       }
     });
   } else {
