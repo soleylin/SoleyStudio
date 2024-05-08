@@ -117,6 +117,7 @@ $(function () {
           success: showdata_delete,
           error: function () {
             Swal.fire("error-- manager/member/member-Delete.php");
+            console.log($(this).data("id"));
           },
         });
       }
