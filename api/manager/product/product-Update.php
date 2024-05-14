@@ -17,7 +17,7 @@ if ($data != "") {
         $price = $mydata["price"];
         $active = $mydata["active"];
 
-        header("Access-Control-Allow-Origin: https://soleylin.github.io");
+        // header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
@@ -30,12 +30,15 @@ if ($data != "") {
         }
         if ($image !== "") {
             $sql = "UPDATE product SET  itemNo='$itemNo', itemId='$itemId', name='$name', image='$image', price='$price', active='$active' WHERE id = '$id'";
+            $nowdir = dirname(__FILE__);
+            $locationdir =  dirname(dirname(dirname(dirname(__FILE__))));
+            $location = $locationdir . '/image/admin/feedback/' . $oldImage;
         } else {
             $sql = "UPDATE product SET  itemNo='$itemNo', itemId='$itemId', name='$name', price='$price', active='$active' WHERE id = '$id'";
         }
 
         if (mysqli_query($conn, $sql)) {
-            unlink("/var/www/html/project/image/admin/product/" . $oldImage);
+            unlink($location);
             echo '{"state" : true, "message":"更新成功！"}';
         } else {
             echo '{"state" : false, "message" :"更新失敗！"}';

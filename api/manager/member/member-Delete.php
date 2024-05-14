@@ -10,7 +10,7 @@ if ($data != "") {
 
             $id = $mydata["id"];
 
-            header("Access-Control-Allow-Origin: https://soleylin.github.io");
+           // header("Access-Control-Allow-Origin: https://soleylin.github.io");
             $servername = "localhost";
             $username = "id22010393_soley";
             $password = "Fdio3_dine";
@@ -22,7 +22,7 @@ if ($data != "") {
                 die("連線失敗" . mysqli_connect_error());
             }
 
-            $sql = "DELETEw FROM member WHERE id = '$id'";
+            $sql = "DELETE FROM member WHERE id = '$id'";
 
             if (mysqli_query($conn, $sql)) {
                 echo '{"state" : true, "message":"刪除成功"}';
