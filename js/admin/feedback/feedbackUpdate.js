@@ -14,7 +14,7 @@ $(function () {
     $("#upd_image").val("");
     $("#upd_prevImg").attr(
       "src",
-      "https://soleystudio.000webhostapp.com//SoleyStudio/image/feedback/" +
+      "https://soleystudio.000webhostapp.com/SoleyStudio/image/feedback/" +
         $(this).data("image")
     );
 
