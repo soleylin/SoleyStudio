@@ -43,7 +43,6 @@ $(function () {
           type: "POST",
           url: "https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
           data: formdata,
-          dataType: "json",
           cache: false,
           contentType: false,
           processData: false,
@@ -52,25 +51,7 @@ $(function () {
             alert("error-- manager/image/feedbackImage-Create.php");
           },
         });
-      } else if (flag_image == "") {
-        var dataJSON = {};
-        dataJSON["id"] = upd_id;
-        dataJSON["sort"] = $("#sort").val();
-        dataJSON["image"] = "";
-
-        $.ajax({
-          type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Update.php",
-          data: JSON.stringify(dataJSON),
-          dataType: "json",
-          success: showdataProduct_upd,
-          error: function () {
-            Swal.fire(
-              "error-- manager/feedback/feedback-Update.php"
-            );
-          },
-        });
-      } else {
+      }else {
         Swal.fire("欄位有誤，請修正!");
       }
     });
