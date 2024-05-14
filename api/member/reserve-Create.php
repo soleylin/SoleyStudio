@@ -17,7 +17,7 @@ if ($data != "") {
         $reserve = $mydata["date"] . " " . $mydata["time"];
         $done = "N";
 
-       // header("Access-Control-Allow-Origin: https://soleylin.github.io");
+       header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
