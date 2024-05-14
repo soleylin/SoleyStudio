@@ -100,7 +100,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/image/productImage-Create.php",
+        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/image/productImage-Create.php",
         data: formdata,
         dataType: "json",
         cache: false,
@@ -132,7 +132,7 @@ function showdataImage(data) {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Create.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Create.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     success: showdata,

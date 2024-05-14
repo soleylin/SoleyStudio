@@ -17,7 +17,7 @@ $(function () {
 
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/api/manager/member/member-Update.php",
+      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/member/member-Update.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdataMember_upd,

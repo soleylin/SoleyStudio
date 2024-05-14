@@ -169,7 +169,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Delete.php",
+          url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -375,7 +375,7 @@ function read() {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
@@ -389,7 +389,7 @@ function read() {
 function readFaceItem() {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataFaceItem,
@@ -404,7 +404,7 @@ function readFaceItem() {
 function readServiceItem() {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,

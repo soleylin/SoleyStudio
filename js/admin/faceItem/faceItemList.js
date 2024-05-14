@@ -9,7 +9,7 @@ export { nowpage };
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataFaceItem,
@@ -41,7 +41,7 @@ $(function () {
   });
 
   //監聽 #delete_btn
-  $("#mybody #delete_btn").click(function () {
+  $("body").on("click", "#mybody #delete_btn", function () {
     Swal.fire({
       title: "確認要刪除這筆資料嗎?",
       showDenyButton: true,
@@ -57,7 +57,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Delete.php",
+          url: "https://http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -125,7 +125,7 @@ function showdata_delete(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleystudio.000webhostapp.com/admin/faceItem.html";
+        location.href = "https://soleylin.github.io/SoleyStudio/admin/faceItem.html";
       }
     });
   }

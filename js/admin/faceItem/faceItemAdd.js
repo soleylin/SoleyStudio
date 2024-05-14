@@ -20,7 +20,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Create.php",
+        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,
@@ -45,7 +45,7 @@ function showdata(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleystudio.000webhostapp.com/admin/faceItem.html";
+        location.href = "https://soleylin.github.io/SoleyStudio/admin/faceItem.html";
       }
     });
   } else {

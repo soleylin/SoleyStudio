@@ -23,7 +23,7 @@ $(function () {
 
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,
@@ -73,7 +73,7 @@ $(function () {
     dataJSON["itemId"] = selected_itemId;
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/api/member/reserveTime-Read.php",
+      url: "https://http://soleystudio.infinityfreeapp.com/api/member/reserveTime-Read.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       async: false,
@@ -129,7 +129,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/member/reserve-Create.php",
+        url: "https://http://soleystudio.infinityfreeapp.com/api/member/reserve-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataReserve,

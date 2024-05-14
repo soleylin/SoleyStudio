@@ -43,7 +43,7 @@ $(function () {
 
     $.ajax({
       type: "GET",
-      url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Read.php",
       dataType: "json",
       async: false,
       success: showdataFaceItem,
@@ -118,7 +118,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/image/productImage-Create.php",
+        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/image/productImage-Create.php",
         data: formdata,
         dataType: "json",
         cache: false,
@@ -145,7 +145,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
+        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataProduct_upd,
@@ -176,7 +176,7 @@ function showdataImage_upd(data) {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Update.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     success: showdataProduct_upd,
@@ -215,7 +215,7 @@ function update_data() {
   dataJSON["sort"] = selected_sort;
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
+    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/product/product-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
