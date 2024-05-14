@@ -59,12 +59,10 @@ $(function () {
 });
 
 function showdataImage_upd(data) {
-  console.log(data);
   var dataJSON = {};
   dataJSON["id"] = upd_id;
   dataJSON["image"] = data.datainfo["name"];
   dataJSON["oldImage"] = oldImage;
-  console.log("DATA.NAME");
 
   $.ajax({
     type: "POST",
