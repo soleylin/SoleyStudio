@@ -22,7 +22,7 @@ $(function () {
 
     $.ajax({
       type: "POST",
-      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/level/level-Update.php",
+      url: "http://soleystudio.infinityfreeapp.com/api/manager/level/level-Update.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdataLevel_upd,
@@ -57,7 +57,7 @@ function update_data() {
   clear_data();
   $.ajax({
     type: "GET",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/level/level-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/manager/level/level-Read.php",
     dataType: "json",
     async: false,
     success: showdataLevel,

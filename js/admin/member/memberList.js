@@ -12,7 +12,7 @@ $(function () {
 
   $.ajax({
     type: "GET",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/level/level-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/manager/level/level-Read.php",
     dataType: "json",
     async: false,
     success: showdataLevel,
@@ -111,7 +111,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://http://soleystudio.infinityfreeapp.com/api/manager/member/member-Delete.php",
+          url: "http://soleystudio.infinityfreeapp.com/api/manager/member/member-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -133,7 +133,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/member/member-Search.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/manager/member/member-Search.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataSearch,
@@ -360,7 +360,7 @@ function read() {
 
   $.ajax({
     type: "POST",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/member/member-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/manager/member/member-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,

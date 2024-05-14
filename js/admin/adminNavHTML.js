@@ -5,7 +5,7 @@ var titleData = [];
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/adminNav-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/manager/adminNav-Read.php",
     dataType: "json",
     async: false,
     success: showdata_nav,

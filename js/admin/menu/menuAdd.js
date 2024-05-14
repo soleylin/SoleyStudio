@@ -48,7 +48,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Create.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,

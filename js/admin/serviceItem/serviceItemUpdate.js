@@ -21,7 +21,7 @@ $(function () {
 
     $.ajax({
       type: "POST",
-      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Update.php",
+      url: "http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Update.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdataServiceItem_upd,
@@ -55,7 +55,7 @@ function update_data(){
     clear_data();
     $.ajax({
       type: "GET",
-      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Read.php",
+      url: "http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Read.php",
       dataType: "json",
       async: false,
       success: showdataServiceItem,

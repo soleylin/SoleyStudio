@@ -5,7 +5,7 @@ var nowpage = 0;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Read.php",
     dataType: "json",
     async: false,
     success: showdataMenu,
@@ -51,7 +51,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Delete.php",
+          url: "http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,

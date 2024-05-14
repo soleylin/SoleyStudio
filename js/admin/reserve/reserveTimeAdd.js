@@ -40,7 +40,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/manager/reserve/reserveTime-Create.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/manager/reserve/reserveTime-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,

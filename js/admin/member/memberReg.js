@@ -48,7 +48,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/member/acc-CheckUni.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/member/acc-CheckUni.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_acc_CheckUni,
@@ -103,7 +103,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/member/tel-CheckUni.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/member/tel-CheckUni.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_tel_CheckUni,
@@ -143,7 +143,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/member/member-Create.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/member/member-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,

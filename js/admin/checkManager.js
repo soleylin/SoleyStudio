@@ -6,7 +6,7 @@ $(function () {
     dataJSON["uid"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "https://http://soleystudio.infinityfreeapp.com/api/manager/checkManager.php",
+      url: "http://soleystudio.infinityfreeapp.com/api/manager/checkManager.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,

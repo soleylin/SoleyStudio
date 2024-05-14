@@ -22,7 +22,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/member/tel-UpdateCheckUni.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/member/tel-UpdateCheckUni.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_tel_CheckUni,
@@ -53,7 +53,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://http://soleystudio.infinityfreeapp.com/api/member/member-Update.php",
+        url: "http://soleystudio.infinityfreeapp.com/api/member/member-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataMember_upd,

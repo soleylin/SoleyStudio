@@ -6,7 +6,7 @@ $(function () {
 
   $.ajax({
     type: "POST",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/member/member-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/member/member-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
@@ -18,7 +18,7 @@ $(function () {
 
   $.ajax({
     type: "POST",
-    url: "https://http://soleystudio.infinityfreeapp.com/api/member/memberReserve-Read.php",
+    url: "http://soleystudio.infinityfreeapp.com/api/member/memberReserve-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
