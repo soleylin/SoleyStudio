@@ -61,7 +61,6 @@ $(function () {
 function showdataImage_upd(data) {
   var dataJSON = {};
   dataJSON["id"] = upd_id;
-  dataJSON["sort"] = $("#sort").val();
   dataJSON["image"] = data.datainfo["name"];
   dataJSON["oldImage"] = oldImage;
 
