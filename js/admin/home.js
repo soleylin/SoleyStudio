@@ -13,7 +13,7 @@ $(function () {
     dataJSON["uid"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "http://https://soleystudio.000webhostapp.com/api/manager/checkManager.php",
+      url: "https://soleystudio.000webhostapp.com/api/manager/checkManager.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,
@@ -194,7 +194,7 @@ $(function () {
   //會員人數
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/member-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/member-Read.php",
     dataType: "json",
     async: false,
     success: showdatamemberData,
@@ -206,7 +206,7 @@ $(function () {
   //本月消費人數
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/record-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/record-Read.php",
     dataType: "json",
     async: false,
     success: showdataRecordData,
@@ -218,7 +218,7 @@ $(function () {
   //回訪人數
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/recordVisit-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/recordVisit-Read.php",
     dataType: "json",
     async: false,
     success: showdataVisitData,
@@ -232,7 +232,7 @@ $(function () {
   //每月會員新增人數
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/memberCount-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/memberCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataMemberCountData,
@@ -246,7 +246,7 @@ $(function () {
   //每月營收
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/priceCount-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/priceCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataPriceCountData,
@@ -258,7 +258,7 @@ $(function () {
   //本月項目數量
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/itemCount-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/itemCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemCountData,
@@ -270,7 +270,7 @@ $(function () {
   //本月營收
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/price-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/price-Read.php",
     dataType: "json",
     async: false,
     success: showdataPriceData,
@@ -282,7 +282,7 @@ $(function () {
   //最新預約
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/reserve-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/reserve-Read.php",
     dataType: "json",
     async: false,
     success: showdataReserve,
@@ -294,7 +294,7 @@ $(function () {
   //本季色系統計
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/colorCount-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/colorCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataColor,
@@ -306,7 +306,7 @@ $(function () {
   //本季材料統計
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/home/materialCount-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/home/materialCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataMaterial,

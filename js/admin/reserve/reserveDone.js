@@ -11,7 +11,7 @@ $(function () {
   $("body").on("click", "#mybody #done_btn", function () {
     $.ajax({
       type: "GET",
-      url: "http://https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+      url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
       dataType: "json",
       async: false,
       success: showdataFaceItem,
@@ -92,7 +92,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "http://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveDone-Create.php",
+        url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveDone-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataReserveDone,
@@ -134,7 +134,7 @@ function showdataReserveDone(data) {
     dataJSON["date"] = date;
     $.ajax({
       type: "POST",
-      url: "http://https://soleystudio.000webhostapp.com/api/manager/member/memberConsumption-Update.php",
+      url: "https://soleystudio.000webhostapp.com/api/manager/member/memberConsumption-Update.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdataMemberDone,

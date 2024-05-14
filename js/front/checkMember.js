@@ -7,7 +7,7 @@ $(function () {
     dataJSON["uid01"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "http://https://soleystudio.000webhostapp.com/api/member/member-LoginUid.php",
+      url: "https://soleystudio.000webhostapp.com/api/member/member-LoginUid.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,

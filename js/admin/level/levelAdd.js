@@ -31,7 +31,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "http://https://soleystudio.000webhostapp.com/api/manager/level/level-Create.php",
+        url: "https://soleystudio.000webhostapp.com/api/manager/level/level-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,

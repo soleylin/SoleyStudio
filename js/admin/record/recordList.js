@@ -13,7 +13,7 @@ export { nowpage };
 $(function () {
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/record/record-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/record/record-Read.php",
     dataType: "json",
     async: false,
     success: showdataRecord,
@@ -24,7 +24,7 @@ $(function () {
 
   $.ajax({
     type: "GET",
-    url: "http://https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,
