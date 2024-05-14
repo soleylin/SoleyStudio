@@ -21,7 +21,7 @@ $(function () {
 
     $.ajax({
       type: "POST",
-      url: "http://soleystudio.infinityfreeapp.com/api/manager/menu/menu-Update.php",
+      url: "http://https://soleystudio.000webhostapp.com/api/manager/menu/menu-Update.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdataMenu_upd,

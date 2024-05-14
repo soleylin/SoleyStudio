@@ -5,7 +5,7 @@ var nowpage = 0;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "http://soleystudio.infinityfreeapp.com/api/member/eyebrow-Read.php",
+    url: "http://https://soleystudio.000webhostapp.com/api/member/eyebrow-Read.php",
     dataType: "json",
     async: false,
     success: showdataProduct,

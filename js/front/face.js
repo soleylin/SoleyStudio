@@ -7,7 +7,7 @@ $(function () {
   read(p_all);
   $.ajax({
     type: "GET",
-    url: "http://soleystudio.infinityfreeapp.com/api/manager/faceItem/faceItem-Read.php",
+    url: "http://https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataitemList,
@@ -151,7 +151,7 @@ function read(itemName) {
   dataJSON["itemName"] = itemName;
   $.ajax({
     type: "POST",
-    url: "http://soleystudio.infinityfreeapp.com/api/member/face-Read.php",
+    url: "http://https://soleystudio.000webhostapp.com/api/member/face-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,

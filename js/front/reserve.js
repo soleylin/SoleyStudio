@@ -7,7 +7,7 @@ var selected_date; //已選擇日期
 $(function () {
   $.ajax({
     type: "GET",
-    url: "http://soleystudio.infinityfreeapp.com/api/manager/serviceItem/serviceItem-Read.php",
+    url: "http://https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,
@@ -33,7 +33,7 @@ $(function () {
     dataJSON["itemId"] = selected_itemId;
     $.ajax({
       type: "POST",
-      url: "http://soleystudio.infinityfreeapp.com/api/member/reserveTime-Read.php",
+      url: "http://https://soleystudio.000webhostapp.com/api/member/reserveTime-Read.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       async: false,
