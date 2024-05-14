@@ -63,6 +63,7 @@ function showdataImage_upd(data) {
   dataJSON["id"] = upd_id;
   dataJSON["image"] = data.datainfo["name"];
   dataJSON["oldImage"] = oldImage;
+  console.log(data.datainfo);
 
   $.ajax({
     type: "POST",
