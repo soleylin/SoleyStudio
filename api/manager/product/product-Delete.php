@@ -11,7 +11,7 @@ if ($data != "") {
         $image = $mydata["image"];
         $nowdir = dirname(__FILE__);
         $locationdir =  dirname(dirname(dirname(dirname(__FILE__))));
-        $location = $locationdir . '/image/admin/feedback/' . $image;
+        $location = $locationdir . '/image/admin/product/' . $image;
 
         header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
@@ -24,6 +24,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "DELETE FROM product WHERE id = '$id'";
 

@@ -9,9 +9,11 @@ if ($data != "") {
     if (isset($mydata["id"]) && $mydata["id"] != "" ) {
 
         $id = $mydata["id"];
-        $sort = $mydata["sort"];
         $image = $mydata["image"];
         $oldImage = $mydata["oldImage"];
+        $nowdir = dirname(__FILE__);
+        $locationdir =  dirname(dirname(dirname(dirname(__FILE__))));
+        $location = $locationdir . '/image/admin/feedback/' . $oldImage;
 
        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
@@ -24,12 +26,14 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+
         if ($image !== "") {
             $sql = "UPDATE feedback SET image='$image' WHERE id = '$id'";
         }
 
         if (mysqli_query($conn, $sql)) {
-            unlink("/var/www/html/project/image/admin/feedback/" . $oldImage);
+            unlink($location);
             echo '{"state" : true, "message":"更新成功！"}';
         } else {
             echo '{"state" : false, "message" :"更新失敗！"}';

@@ -27,6 +27,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "INSERT INTO member (userName, account, password, tel, level, times, avgPrice) VALUES ('$user','$acc','$pwd','$tel','$level','$times','$avgPrice')";
 

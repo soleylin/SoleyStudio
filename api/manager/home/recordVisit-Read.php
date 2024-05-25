@@ -9,7 +9,9 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
-$sql = "SELECT DISTINCT memberId, COUNT(*) FROM final WHERE memberId IN (SELECT DISTINCT memberId FROM final WHERE MONTH(date) = MONTH(DATE_SUB(CURDATE() , INTERVAL 2 MONTH)) ) AND MONTH(date) = MONTH(DATE_SUB(CURDATE(), INTERVAL 1 MONTH)) GROUP BY memberId;";
+$conn->set_charset("utf8");
+
+$sql = "SELECT DISTINCT memberId, COUNT(*) FROM final WHERE memberId IN (SELECT DISTINCT memberId FROM final WHERE MONTH(date) = MONTH(DATE_SUB(CURDATE() , INTERVAL 2 MONTH)) ) AND (MONTH(date) = MONTH(DATE_SUB(CURDATE(), INTERVAL 1 MONTH)) OR MONTH(date) = MONTH(CURDATE())) GROUP BY memberId;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();
 

@@ -25,6 +25,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         $sql = "INSERT INTO final (memberId, name, item, date, color, material, faceItem, price) VALUES ('$memberId','$userName','$serviceName','$date','$color','$material','$faceItem','$price')";
 
         if (mysqli_query($conn, $sql)) {

@@ -9,6 +9,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
+
 $sql = "SELECT YEAR(date) AS year, MONTH(date) AS month, SUM(price) AS price FROM final WHERE date > DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND date <= CURDATE() + INTERVAL 1 DAY GROUP BY year, month ORDER BY year ASC, month ASC;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();

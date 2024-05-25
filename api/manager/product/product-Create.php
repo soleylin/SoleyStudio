@@ -26,6 +26,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "INSERT INTO product (itemNo, itemId, name, image, price, active) VALUES ('$itemNo','$itemId','$name','$image','$price','$active')";
 

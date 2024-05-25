@@ -21,6 +21,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         $sql = "UPDATE final SET  color = '$color', material = '$material', faceItem = '$faceItem', price = '$price' WHERE id = '$id'";
         if (mysqli_query($conn, $sql)) {
             //更新消費紀錄成功

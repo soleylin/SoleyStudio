@@ -28,11 +28,13 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+
         if ($image !== "") {
             $sql = "UPDATE product SET  itemNo='$itemNo', itemId='$itemId', name='$name', image='$image', price='$price', active='$active' WHERE id = '$id'";
             $nowdir = dirname(__FILE__);
             $locationdir =  dirname(dirname(dirname(dirname(__FILE__))));
-            $location = $locationdir . '/image/admin/feedback/' . $oldImage;
+            $location = $locationdir . '/image/admin/product/' . $oldImage;
         } else {
             $sql = "UPDATE product SET  itemNo='$itemNo', itemId='$itemId', name='$name', price='$price', active='$active' WHERE id = '$id'";
         }

@@ -20,6 +20,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         if ($idchk !== [] && $idatechk !== []) {
             $sql = "DELETE FROM reserve_time WHERE id = $id";
 

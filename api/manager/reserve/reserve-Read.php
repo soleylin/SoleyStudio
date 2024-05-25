@@ -9,9 +9,9 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
 
 $sql = "SELECT a.*, b.name AS serviceName FROM reserve a LEFT JOIN service_item b ON a.itemId = b.id WHERE done = 'N' ORDER BY date ASC";
-
 
 $result = mysqli_query($conn, $sql);
 $mydata = array();

@@ -21,6 +21,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         if ($chk !== []) {
             //有選取ids
             $sql = "SELECT itemId, date FROM reserve WHERE id IN ('$ids')";

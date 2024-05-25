@@ -9,6 +9,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
 
 $sql = "SELECT * FROM level ORDER BY code";
 $result = mysqli_query($conn, $sql);

@@ -18,6 +18,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         if ($chk !== []) {
             $sql = "SELECT a.*, b.name AS serviceName FROM reserve a LEFT JOIN service_item b ON a.itemId = b.id WHERE a.id IN ('$ids')";
 

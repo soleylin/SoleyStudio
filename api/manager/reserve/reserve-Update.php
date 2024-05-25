@@ -29,6 +29,7 @@
             if (!$conn) {
                 die("連線失敗" . mysqli_connect_error());
             }
+            $conn->set_charset("utf8");
 
             //更新舊時段
             $sql = "UPDATE reserve_time SET active = 'N' WHERE itemId = '$olditemId' AND date = '$olddate' AND time = '$oldtime'";

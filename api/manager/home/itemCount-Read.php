@@ -9,6 +9,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
+
 $sql = "SELECT item AS item, COUNT(*) AS num FROM final WHERE date > DATE_SUB(CURDATE(), INTERVAL 1 MONTH) AND date <= CURDATE() + INTERVAL 1 DAY GROUP BY item ORDER BY item ASC;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();

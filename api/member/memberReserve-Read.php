@@ -19,6 +19,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "SELECT a.date, b.name AS serviceName FROM reserve a JOIN service_item b ON a.itemId = b.id WHERE a.memberId = '$id'";
         $result = mysqli_query($conn, $sql);

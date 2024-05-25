@@ -19,6 +19,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "SELECT a.*, b.name AS levelName FROM member a LEFT JOIN level b ON a.level = b.code WHERE a.id LIKE '%$msg%' OR a.userName LIKE '%$msg%' OR a.account LIKE '%$msg%' OR a.tel LIKE '%$msg%' ORDER BY a.id DESC";
         $result = mysqli_query($conn, $sql);

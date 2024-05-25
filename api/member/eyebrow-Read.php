@@ -9,8 +9,9 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
 
-$sql = "SELECT a.*, b.name as serviceName FROM product a LEFT JOIN service_item b ON a.itemId = b.id where b.name = '霧眉' AND a.active = 'Y';";
+$sql = "SELECT a.*, b.name as serviceName FROM product a LEFT JOIN service_item b ON a.itemId = b.id where b.name = '霧眉' AND a.active = 'Y' ORDER BY a.created_at DESC;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();
 

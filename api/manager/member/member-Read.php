@@ -20,6 +20,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         if ($sort == "0") {
             $sql = "SELECT a.*, b.name as levelName FROM member a LEFT JOIN level b ON a.level = b.code ORDER BY a.id DESC;";
         } else {

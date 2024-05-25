@@ -18,6 +18,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "SELECT a.*, b.name AS serviceName FROM reserve_time a LEFT JOIN service_item b ON a.itemId = b.id WHERE active = 'N' AND itemId = $itemId AND ( a.date > CURDATE() OR (a.date = CURDATE() AND a.time > CURTIME())) ORDER BY a.date ASC";
 

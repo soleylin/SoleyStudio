@@ -10,7 +10,7 @@ if ($data != "") {
         $itemId = $mydata["itemId"];
         $sort = $mydata["sort"];
 
-       header("Access-Control-Allow-Origin: https://soleylin.github.io");
+        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
@@ -20,6 +20,8 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
+        
         if ($itemId == "0") {
             if ($sort == "0") {
                 $sql = "SELECT a.*, b.name as serviceName FROM product a LEFT JOIN service_item b ON a.itemId = b.id ORDER BY a.id DESC";

@@ -9,6 +9,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
+
 $sql = "SELECT color, COUNT(*) AS num FROM `final` WHERE item='凝膠美甲' AND date>DATE_SUB(CURDATE(), INTERVAL 3 MONTH) AND date <= CURDATE() + INTERVAL 1 DAY GROUP BY color ORDER BY color;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();

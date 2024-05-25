@@ -21,6 +21,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "INSERT INTO service_item (name) VALUES ('$name')";
 

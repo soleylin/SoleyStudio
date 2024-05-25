@@ -9,6 +9,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
+
 $sql = "SELECT * FROM member;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();

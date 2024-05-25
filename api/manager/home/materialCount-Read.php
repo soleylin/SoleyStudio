@@ -9,6 +9,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("連線失敗" . mysqli_connect_error());
 }
+$conn->set_charset("utf8");
+
 $sql = "SELECT TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(material, '+', n.digit+1), '+', -1)) AS materialType, COUNT(*) AS num FROM final JOIN ( SELECT 0 AS digit UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 ) n ON LENGTH(REPLACE(material, '+' , '')) <= LENGTH(material)-n.digit WHERE item='凝膠美甲' AND date > DATE_SUB(CURDATE(), INTERVAL 3 MONTH) AND date <= CURDATE() + INTERVAL 1 DAY GROUP BY materialType ORDER BY materialType;";
 $result = mysqli_query($conn, $sql);
 $mydata = array();

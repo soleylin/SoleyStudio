@@ -24,6 +24,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "UPDATE menu SET layer1 = '$layer1', sort = '$sort', title = '$title', url = '$url' WHERE id = '$id'";
 

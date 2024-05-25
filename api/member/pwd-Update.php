@@ -23,6 +23,7 @@ if ($data != "") {
         if (!$conn) {
             die("連線失敗" . mysqli_connect_error());
         }
+        $conn->set_charset("utf8");
 
         $sql = "SELECT account, password FROM member WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
