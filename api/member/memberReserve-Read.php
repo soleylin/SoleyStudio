@@ -9,7 +9,7 @@ if ($data != "") {
 
         $id = $mydata["id"];
 
-       header("Access-Control-Allow-Origin: https://soleylin.github.io");
+        header("Access-Control-Allow-Origin: https://soleylin.github.io");
         $servername = "localhost";
         $username = "id22010393_soley";
         $password = "Fdio3_dine";
@@ -21,7 +21,7 @@ if ($data != "") {
         }
         $conn->set_charset("utf8");
 
-        $sql = "SELECT a.date, b.name AS serviceName FROM reserve a JOIN service_item b ON a.itemId = b.id WHERE a.memberId = '$id'";
+        $sql = "SELECT a.date, b.name AS serviceName FROM reserve a JOIN service_item b ON a.itemId = b.id WHERE a.memberId = '$id' AND DATE(a.date) > CURDATE() OR (DATE(a.date) = CURDATE() AND TIME(a.date) > CURTIME()) ORDER BY a.date ASC";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) {
             $mydata = array();
