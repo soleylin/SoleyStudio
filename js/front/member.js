@@ -1,32 +1,34 @@
 import { getCookie } from "/SoleyStudio/js/setcookie.js";
 var u_id = getCookie("u_id");
 $(function () {
-  var dataJSON = {};
-  dataJSON["id"] = u_id;
+  if (u_id !== "") {
+    var dataJSON = {};
+    dataJSON["id"] = u_id;
 
-  $.ajax({
-    type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/member/member-Read.php",
-    data: JSON.stringify(dataJSON),
-    dataType: "json",
-    async: false,
-    success: showdata,
-    error: function () {
-      Swal.fire("系統串接錯誤！-- member/member-Read.php");
-    },
-  });
+    $.ajax({
+      type: "POST",
+      url: "https://soleystudio.000webhostapp.com/api/member/member-Read.php",
+      data: JSON.stringify(dataJSON),
+      dataType: "json",
+      async: false,
+      success: showdata,
+      error: function () {
+        Swal.fire("系統串接錯誤！-- member/member-Read.php");
+      },
+    });
 
-  $.ajax({
-    type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/member/memberReserve-Read.php",
-    data: JSON.stringify(dataJSON),
-    dataType: "json",
-    async: false,
-    success: showdataReserve,
-    error: function () {
-      Swal.fire("系統串接錯誤！-- member/memberReserve-Read.php");
-    },
-  });
+    $.ajax({
+      type: "POST",
+      url: "https://soleystudio.000webhostapp.com/api/member/memberReserve-Read.php",
+      data: JSON.stringify(dataJSON),
+      dataType: "json",
+      async: false,
+      success: showdataReserve,
+      error: function () {
+        Swal.fire("系統串接錯誤！-- member/memberReserve-Read.php");
+      },
+    });
+  }
 
   //監聽 #update_btn
   $("#mybody #update_btn").click(function () {
@@ -91,7 +93,9 @@ function showdata(data) {
       item.userName +
       '">修改密碼</button></div>';
     $("#endList").append(strHTML);
-    $("#endText").append('<div class="remark_text text-end mt-1">欲修改預約項目或日期請洽詢 line</div>');
+    $("#endText").append(
+      '<div class="remark_text text-end mt-1">欲修改預約項目或日期請洽詢 line</div>'
+    );
   });
 }
 
