@@ -1,4 +1,4 @@
-import { getCookie } from "/js/setcookie.js";
+import { getCookie } from "/SoleyStudio/js/setcookie.js";
 var u_id = getCookie("u_id");
 $(function () {
   var dataJSON = {};
