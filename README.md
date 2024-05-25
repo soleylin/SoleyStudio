@@ -46,6 +46,5 @@
 
 你可以透過以下方式與我聯絡
 
-- Instagram: [ichbin_benson](https://www.instagram.com/ichbin_benson/)
 - E-mail: soley10160329@gmail.com
 
