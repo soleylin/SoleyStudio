@@ -57,7 +57,7 @@ $(function () {
 
           $.ajax({
             type: "POST",
-            url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
+            url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
             data: JSON.stringify(dataJSON),
             dataType: "json",
             success: showdataReserveTime_upd,
@@ -77,7 +77,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
+        url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataReserveTime_upd,
@@ -117,7 +117,7 @@ function update_data() {
 
   $.ajax({
     type: "POST",
-    url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,

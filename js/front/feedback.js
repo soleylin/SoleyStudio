@@ -5,7 +5,7 @@ var nowpage = 0;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://https://soleystudio.000webhostapp.com/api/member/feedback-Read.php",
+    url: "https://soleystudio.000webhostapp.com/api/member/feedback-Read.php",
     dataType: "json",
     async: false,
     success: showdataProduct,

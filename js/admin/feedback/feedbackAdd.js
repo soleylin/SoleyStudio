@@ -27,7 +27,7 @@ $(function () {
   $("#modal_add_btn").click(function () {
     $.ajax({
       type: "GET",
-      url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
+      url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
       dataType: "json",
       async: false,
       success: showdataFeedback,
@@ -44,7 +44,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
+        url: "https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
         data: formdata,
         dataType: "json",
         cache: false,
@@ -69,7 +69,7 @@ function showdataImage(data) {
 
   $.ajax({
     type: "POST",
-    url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Create.php",
+    url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Create.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     success: showdata,
