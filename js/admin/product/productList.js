@@ -11,7 +11,9 @@ export { clear_data };
 export { nowpage };
 export { selected_sort };
 $(function () {
-  read();
+  if (getCookie("uid") != "") {
+    read();
+  }
   readFaceItem();
   readServiceItem();
 
@@ -296,7 +298,8 @@ function showdata_delete(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio/admin/product.html";
+        location.href =
+          "https://soleylin.github.io/SoleyStudio/admin/product.html";
       }
     });
   }
@@ -394,9 +397,7 @@ function readFaceItem() {
     async: false,
     success: showdataFaceItem,
     error: function () {
-      Swal.fire(
-        "系統串接錯誤！ - manager/faceItem/faceItem-Read.php"
-      );
+      Swal.fire("系統串接錯誤！ - manager/faceItem/faceItem-Read.php");
     },
   });
 }
@@ -409,9 +410,7 @@ function readServiceItem() {
     async: false,
     success: showdataItemId,
     error: function () {
-      Swal.fire(
-        "系統串接錯誤！ - manager/serviceItem/serviceItem-Read.php"
-      );
+      Swal.fire("系統串接錯誤！ - manager/serviceItem/serviceItem-Read.php");
     },
   });
 }
@@ -419,4 +418,20 @@ function readServiceItem() {
 function numberComma(num) {
   var comma = /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g;
   return num.toString().replace(comma, ",");
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

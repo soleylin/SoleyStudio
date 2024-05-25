@@ -31,25 +31,41 @@ $(function () {
 });
 
 function showdata_loginUid(data) {
-  if (data.data[0].level == "B100") {
-    $("#content").html("");
+  if (data.state) {
+    if (data.data[0].level == "B100") {
+      $("#content").html("");
+      Swal.fire({
+        title: "僅提供管理者觀看, 將倒回首頁",
+        showDenyButton: false,
+        showCancelButton: false,
+        confirmButtonText: "前往首頁",
+        confirmButtonColor: "#7d6868",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = "http://soleystudio.infinityfreeapp.com/";
+        }
+      });
+    } else {
+      $("#user_message").removeClass("d-none");
+      $("#user_message").addClass("d-block");
+      $("#logout_btn").removeClass("d-none");
+      $("#logout_btn").addClass("d-block");
+      $("#user_message").text(data.data[0].userName);
+    }
+  } else {
+    $("#dataList").empty();
     Swal.fire({
-      title: "僅提供管理者觀看, 將倒回首頁",
+      title: "請登入會員",
       showDenyButton: false,
       showCancelButton: false,
-      confirmButtonText: "前往首頁",
+      confirmButtonText: "前往登入頁面",
+      denyButtonText: `Don't save`,
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio/";
+        location.href = "http://soleystudio.infinityfreeapp.com/";
       }
     });
-  } else {
-    $("#user_message").removeClass("d-none");
-    $("#user_message").addClass("d-block");
-    $("#logout_btn").removeClass("d-none");
-    $("#logout_btn").addClass("d-block");
-    $("#user_message").text(data.data[0].userName);
   }
 }
 
