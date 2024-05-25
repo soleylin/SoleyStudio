@@ -32,7 +32,7 @@ $(function () {
     $("#upd_image").val("");
     $("#upd_prevImg").attr(
       "src",
-      "https://soleylin.github.io/SoleyStudio/image/admin/product/" +
+      " https://soleystudio.000webhostapp.com/image/admin/product/" +
         $(this).data("image")
     );
     $("#upd_price").val($(this).data("price"));
