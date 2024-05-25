@@ -10,7 +10,7 @@ export { nowpage };
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
     dataType: "json",
     async: false,
     success: showdataFeedback,
@@ -59,7 +59,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Delete.php",
+          url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -160,7 +160,7 @@ function drawTable(page) {
 
   newData[page].forEach(function (item) {
     var strHTML =
-      '<tr><td data-th="圖檔" class="tdc"><img src="https://soleystudio.000webhostapp.com/image/admin/feedback/' +
+      '<tr><td data-th="圖檔" class="tdc"><img src="https://soleylin.github.io/SoleyStudio/image/admin/feedback/' +
       item.image +
       '" alt="" class="mt-3" style="height: 300px" /></td><td data-th="建檔時間" class="tdc">' +
       item.created_at +

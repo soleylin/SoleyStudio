@@ -48,7 +48,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/member/acc-CheckUni.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/member/acc-CheckUni.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_acc_CheckUni,
@@ -117,7 +117,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/member/tel-CheckUni.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/member/tel-CheckUni.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_tel_CheckUni,
@@ -173,7 +173,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/member/member-Create.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/member/member-Create.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata,
@@ -213,7 +213,7 @@ function showdata(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio";
+        location.href = "https://soleylin.github.io/SoleyStudio/";
       }
     });
   } else {

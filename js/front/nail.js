@@ -7,7 +7,7 @@ var pageNumber = 8;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/member/nail-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/member/nail-Read.php",
     dataType: "json",
     async: false,
     success: showdataProduct,
@@ -79,11 +79,11 @@ function drawTable(page) {
 
   newData[page].forEach(function (item) {
     var strHTML =
-      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img"><a href="https://soleystudio.000webhostapp.com/image/admin/product/' +
+      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img bg-cover"><a href="https://soleylin.github.io/SoleyStudio/image/admin/product/' +
       item.image +
       '" data-lightbox="itemImage"data-title="' +
       item.name +
-      '"><img src="https://soleystudio.000webhostapp.com/image/admin/product/' +
+      '"><img src="https://soleylin.github.io/SoleyStudio/image/admin/product/' +
       item.image +
       '" alt="" /></a></div><button class="btn mt-auto text-center fw-700">詳細資料</button></div></div>';
 

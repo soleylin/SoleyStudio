@@ -13,7 +13,7 @@ $(function () {
     dataJSON["uid"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/api/manager/checkManager.php",
+      url: "https://https://soleystudio.000webhostapp.com/api/manager/checkManager.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,
@@ -31,7 +31,7 @@ $(function () {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio";
+        location.href = "https://soleylin.github.io/SoleyStudio/";
       }
     });
   }
@@ -194,7 +194,7 @@ $(function () {
   //會員人數
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/member-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/member-Read.php",
     dataType: "json",
     async: false,
     success: showdatamemberData,
@@ -206,7 +206,7 @@ $(function () {
   //本月消費人數
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/record-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/record-Read.php",
     dataType: "json",
     async: false,
     success: showdataRecordData,
@@ -218,7 +218,7 @@ $(function () {
   //回訪人數
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/recordVisit-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/recordVisit-Read.php",
     dataType: "json",
     async: false,
     success: showdataVisitData,
@@ -232,7 +232,7 @@ $(function () {
   //每月會員新增人數
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/memberCount-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/memberCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataMemberCountData,
@@ -246,7 +246,7 @@ $(function () {
   //每月營收
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/priceCount-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/priceCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataPriceCountData,
@@ -258,7 +258,7 @@ $(function () {
   //本月項目數量
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/itemCount-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/itemCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemCountData,
@@ -270,7 +270,7 @@ $(function () {
   //本月營收
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/price-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/price-Read.php",
     dataType: "json",
     async: false,
     success: showdataPriceData,
@@ -282,7 +282,7 @@ $(function () {
   //最新預約
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/reserve-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/reserve-Read.php",
     dataType: "json",
     async: false,
     success: showdataReserve,
@@ -294,7 +294,7 @@ $(function () {
   //本季色系統計
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/colorCount-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/colorCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataColor,
@@ -306,7 +306,7 @@ $(function () {
   //本季材料統計
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/home/materialCount-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/home/materialCount-Read.php",
     dataType: "json",
     async: false,
     success: showdataMaterial,
@@ -321,16 +321,19 @@ $(function () {
 function showdatamemberData(data) {
   var memberNum = data.data.length;
   $(".counter01").text(memberNum);
+  $("#text_loading01").addClass("d-none");
 }
 
 function showdataRecordData(data) {
   consumptionNum = data.data.length;
   var PriceNum = data.pricedata[0].avgPrice;
   $(".counter02").text(consumptionNum);
+  $("#text_loading02").addClass("d-none");
 }
 
 function showdataPriceCountData(data) {
   $(".counter03").text(data.data[0].price);
+  $("#text_loading03").addClass("d-none");
 }
 
 function showdataVisitData(data) {
@@ -338,6 +341,7 @@ function showdataVisitData(data) {
   var preVisit = data.predata.length;
   var rate = ((visitNum / preVisit) * 100).toFixed(2);
   $(".counter04").text(rate + " %");
+  $("#text_loading04").addClass("d-none");
 }
 
 function showdataMemberCountData(data) {
@@ -429,7 +433,7 @@ function showdata_loginUid(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio";
+        location.href = "https://soleylin.github.io/SoleyStudio/";
       }
     });
   } else {

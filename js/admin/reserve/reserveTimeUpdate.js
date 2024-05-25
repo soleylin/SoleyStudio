@@ -5,6 +5,7 @@ import { nowpage } from "./reserveTimeList.js";
 
 var upd_id;
 var active;
+var actived; //是否已被預約
 $(function () {
   //監聽 #update_btn
   $("body").on("click", " #mybody #update_btn", function () {
@@ -18,9 +19,11 @@ $(function () {
     if ($(this).data("active") == "Y") {
       $("input[id=upd_active]").prop("checked", true);
       active = "Y";
+      actived = "Y";
     } else if ($(this).data("active") == "N") {
       $("input[id=upd_active]").prop("checked", false);
       active = "N";
+      actived = "N";
     }
   });
 
@@ -35,23 +38,54 @@ $(function () {
 
   //監聽 #modal_update_btn
   $("#modal_update_btn").click(function () {
-    var dataJSON = {};
-    dataJSON["id"] = upd_id;
-    dataJSON["itemId"] = $("#upd_itemId").val();
-    dataJSON["date"] = $("#upd_date").val();
-    dataJSON["time"] = $("#upd_time").val();
-    dataJSON["active"] = active;
+    if (actived == "Y") {
+      Swal.fire({
+        title: "原時段已有人預約，是否確定更改內容",
+        showDenyButton: false,
+        showCancelButton: true,
+        confirmButtonText: "確定",
+        cancelButtonText: "取消",
+        confirmButtonColor: "#7d6868",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          var dataJSON = {};
+          dataJSON["id"] = upd_id;
+          dataJSON["itemId"] = $("#upd_itemId").val();
+          dataJSON["date"] = $("#upd_date").val();
+          dataJSON["time"] = $("#upd_time").val();
+          dataJSON["active"] = active;
 
-    $.ajax({
-      type: "POST",
-      url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
-      data: JSON.stringify(dataJSON),
-      dataType: "json",
-      success: showdataReserveTime_upd,
-      error: function () {
-        Swal.fire("error-- manager/reserve/reserveTime-Update.php");
-      },
-    });
+          $.ajax({
+            type: "POST",
+            url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
+            data: JSON.stringify(dataJSON),
+            dataType: "json",
+            success: showdataReserveTime_upd,
+            error: function () {
+              Swal.fire("error-- manager/reserve/reserveTime-Update.php");
+            },
+          });
+        }
+      });
+    } else {
+      var dataJSON = {};
+      dataJSON["id"] = upd_id;
+      dataJSON["itemId"] = $("#upd_itemId").val();
+      dataJSON["date"] = $("#upd_date").val();
+      dataJSON["time"] = $("#upd_time").val();
+      dataJSON["active"] = active;
+
+      $.ajax({
+        type: "POST",
+        url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Update.php",
+        data: JSON.stringify(dataJSON),
+        dataType: "json",
+        success: showdataReserveTime_upd,
+        error: function () {
+          Swal.fire("error-- manager/reserve/reserveTime-Update.php");
+        },
+      });
+    }
   });
 });
 
@@ -83,15 +117,13 @@ function update_data() {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/reserve/reserveTime-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
     success: showdataReserveTime,
     error: function () {
-      Swal.fire(
-        "系統串接錯誤！-- manager/reserve/reserveTime-Read.php"
-      );
+      Swal.fire("系統串接錯誤！-- manager/reserve/reserveTime-Read.php");
     },
   });
 }

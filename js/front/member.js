@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from "/js/setcookie.js";
 var u_id = getCookie("u_id");
 $(function () {
   var dataJSON = {};
@@ -6,7 +6,7 @@ $(function () {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/member/member-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/member/member-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
@@ -18,7 +18,7 @@ $(function () {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/member/memberReserve-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/member/memberReserve-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,

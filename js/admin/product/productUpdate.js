@@ -32,7 +32,7 @@ $(function () {
     $("#upd_image").val("");
     $("#upd_prevImg").attr(
       "src",
-      "https://soleystudio.000webhostapp.com/image/admin/product/" +
+      "https://soleylin.github.io/SoleyStudio/image/admin/product/" +
         $(this).data("image")
     );
     $("#upd_price").val($(this).data("price"));
@@ -43,7 +43,7 @@ $(function () {
 
     $.ajax({
       type: "GET",
-      url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+      url: "https://https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
       dataType: "json",
       async: false,
       success: showdataFaceItem,
@@ -118,7 +118,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/image/productImage-Create.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/manager/image/productImage-Create.php",
         data: formdata,
         dataType: "json",
         cache: false,
@@ -145,7 +145,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdataProduct_upd,
@@ -176,7 +176,7 @@ function showdataImage_upd(data) {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/product/product-Update.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     success: showdataProduct_upd,
@@ -215,7 +215,7 @@ function update_data() {
   dataJSON["sort"] = selected_sort;
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,

@@ -14,7 +14,7 @@ $(function () {
     $("#upd_image").val("");
     $("#upd_prevImg").attr(
       "src",
-      "https://soleystudio.000webhostapp.com/image/admin/feedback/" +
+      "https://soleylin.github.io/SoleyStudio/image/admin/feedback/" +
         $(this).data("image")
     );
 
@@ -41,8 +41,9 @@ $(function () {
         formdata.append("file", upd_image.files[0]);
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
+          url: "https://https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
           data: formdata,
+          dataType: "json",
           cache: false,
           contentType: false,
           processData: false,
@@ -51,7 +52,24 @@ $(function () {
             alert("error-- manager/image/feedbackImage-Create.php");
           },
         });
-      }else {
+      } else if (flag_image == "") {
+        var dataJSON = {};
+        dataJSON["id"] = upd_id;
+        dataJSON["image"] = "";
+
+        $.ajax({
+          type: "POST",
+          url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Update.php",
+          data: JSON.stringify(dataJSON),
+          dataType: "json",
+          success: showdataProduct_upd,
+          error: function () {
+            Swal.fire(
+              "error-- manager/feedback/feedback-Update.php"
+            );
+          },
+        });
+      } else {
         Swal.fire("欄位有誤，請修正!");
       }
     });
@@ -66,7 +84,7 @@ function showdataImage_upd(data) {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Update.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Update.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     success: showdataProduct_upd,
@@ -101,7 +119,7 @@ function update_data() {
   flag_image = "";
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Read.php",
     dataType: "json",
     async: false,
     success: showdataFeedback,

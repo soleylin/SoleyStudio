@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from "/js/setcookie.js";
 var upd_id = getCookie("u_id");
 var flag_oldpwd = false;
 var flag_pwd = false;
@@ -128,7 +128,7 @@ $(function () {
 
       $.ajax({
         type: "POST",
-        url: "https://soleystudio.000webhostapp.com/api/member/pwd-Update.php",
+        url: "https://https://soleystudio.000webhostapp.com/api/member/pwd-Update.php",
         data: JSON.stringify(dataJSON),
         dataType: "json",
         success: showdata_memberPwd_update,

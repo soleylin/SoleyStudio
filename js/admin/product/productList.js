@@ -169,7 +169,7 @@ $(function () {
 
         $.ajax({
           type: "POST",
-          url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Delete.php",
+          url: "https://https://soleystudio.000webhostapp.com/api/manager/product/product-Delete.php",
           data: JSON.stringify(dataJSON),
           dataType: "json",
           success: showdata_delete,
@@ -329,7 +329,7 @@ function drawTable(page) {
       item.serviceName +
       '</td><td data-th="名稱" class="tdc">' +
       item.name +
-      '</td><td data-th="圖片" class="tdc"> <img src="https://soleystudio.000webhostapp.com/image/admin/product/' +
+      '</td><td data-th="圖片" class="tdc"> <img src="https://soleylin.github.io/SoleyStudio/image/admin/product/' +
       item.image +
       '" alt="" class="mt-1 mb-1 bg-cover imgList" ></td><td data-th="價格" class="tdc">' +
       priceComma +
@@ -375,7 +375,7 @@ function read() {
 
   $.ajax({
     type: "POST",
-    url: "https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/product/product-Read.php",
     data: JSON.stringify(dataJSON),
     dataType: "json",
     async: false,
@@ -389,7 +389,7 @@ function read() {
 function readFaceItem() {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/faceItem/faceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataFaceItem,
@@ -404,7 +404,7 @@ function readFaceItem() {
 function readServiceItem() {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/manager/serviceItem/serviceItem-Read.php",
     dataType: "json",
     async: false,
     success: showdataItemId,

@@ -5,7 +5,7 @@ var nowpage = 0;
 $(function () {
   $.ajax({
     type: "GET",
-    url: "https://soleystudio.000webhostapp.com/api/member/feedback-Read.php",
+    url: "https://https://soleystudio.000webhostapp.com/api/member/feedback-Read.php",
     dataType: "json",
     async: false,
     success: showdataProduct,
@@ -106,9 +106,9 @@ function drawTable(page) {
 
   newData[page].forEach(function (item) {
     var strHTML =
-      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img bg-cover"><img src="https://soleystudio.000webhostapp.com/image/admin/feedback/' +
+      '<div class="col-md-6 col-lg-4 col-xl-3"><div class="s2_box ms-auto me-auto"><div class="s2_bgbox"></div><div class="s2_img bg-cover"><img src="https://soleylin.github.io/SoleyStudio/image/admin/feedback/' +
       item.image +
-      '" alt="" /></div><a href="https://soleystudio.000webhostapp.com/image/admin/feedback/' +
+      '" alt="" /></div><a href="https://soleylin.github.io/SoleyStudio/image/admin/feedback/' +
       item.image +
       '" data-lightbox="itemImage"><button class="btn mt-auto text-center fw-700">放大查看</button></a></div></div>';
 

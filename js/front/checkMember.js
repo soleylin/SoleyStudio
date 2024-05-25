@@ -1,4 +1,4 @@
-import { getCookie } from "/js/cookie.js";
+import { getCookie } from "/js/setcookie.js";
 $(function () {
   //判斷是否有uidCookie
   if (getCookie("uid") != "") {
@@ -7,7 +7,7 @@ $(function () {
     dataJSON["uid01"] = getCookie("uid");
     $.ajax({
       type: "POST",
-      url: "https://soleystudio.000webhostapp.com/api/member/member-LoginUid.php",
+      url: "https://https://soleystudio.000webhostapp.com/api/member/member-LoginUid.php",
       data: JSON.stringify(dataJSON),
       dataType: "json",
       success: showdata_loginUid,
@@ -26,7 +26,7 @@ $(function () {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio";
+        location.href = "https://soleylin.github.io/SoleyStudio/";
       }
     });
   }
