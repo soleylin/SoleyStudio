@@ -46,7 +46,6 @@ $(function () {
         type: "POST",
         url: "https://soleystudio.000webhostapp.com/api/manager/image/feedbackImage-Create.php",
         data: formdata,
-        dataType: "json",
         cache: false,
         contentType: false,
         processData: false,
