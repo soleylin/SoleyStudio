@@ -59,11 +59,11 @@ $(function () {
 });
 
 function showdataImage(data) {
+  console.log(data.datainfo["name"]);
   var dataJSON = {};
   arrayLength = arrayLength + 1;
   dataJSON["sort"] = arrayLength;
   dataJSON["image"] = data.datainfo["name"];
-  console.log(data.datainfo["name"]);
   $.ajax({
     type: "POST",
     url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Create.php",
