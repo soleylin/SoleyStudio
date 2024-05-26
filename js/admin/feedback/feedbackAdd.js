@@ -32,9 +32,7 @@ $(function () {
       async: false,
       success: showdataFeedback,
       error: function () {
-        Swal.fire(
-          "系統串接錯誤！ - manager/feedback/feedback-Read.php"
-        );
+        Swal.fire("系統串接錯誤！ - manager/feedback/feedback-Read.php");
       },
     });
 
@@ -65,7 +63,7 @@ function showdataImage(data) {
   arrayLength = arrayLength + 1;
   dataJSON["sort"] = arrayLength;
   dataJSON["image"] = data.datainfo["name"];
-
+  console.log(data.datainfo["name"]);
   $.ajax({
     type: "POST",
     url: "https://soleystudio.000webhostapp.com/api/manager/feedback/feedback-Create.php",
@@ -89,7 +87,8 @@ function showdata(data) {
       confirmButtonColor: "#7d6868",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "https://soleylin.github.io/SoleyStudio/admin/feedback.html";
+        location.href =
+          "https://soleylin.github.io/SoleyStudio/admin/feedback.html";
       }
     });
   } else {
