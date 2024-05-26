@@ -59,7 +59,7 @@ $(function () {
 });
 
 function showdataImage(data) {
-  console.log(data.datainfo["name"]);
+  console.log(data);
   var dataJSON = {};
   arrayLength = arrayLength + 1;
   dataJSON["sort"] = arrayLength;
